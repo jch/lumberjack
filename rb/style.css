@@ -1,0 +1,68 @@
+.clear { clear: both;}
+a {
+  text-decoration: none;
+  color: rgba(0,80,255, 0.9);
+}
+body {
+  background-color: #d2d2d2;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 13px;
+}
+div, p {margin:0; padding:0;}
+.box {
+  margin: 0 40px;
+  border-top: 1px solid #b6b6b6;
+  border-right: 1px solid #a3a3a3;
+  border-left: 1px solid #a3a3a3;
+  border-bottom: 1px solid #7f7f7f;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.286719) 0px 1px 3px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#eaeaea));
+  -webkit-box-shadow: rgba(0, 0, 0, 0.286719) 2px 2px 3px;
+}
+
+.box > .content {
+  position: relative;
+  min-height: 150px;
+  border: 1px solid #fff;
+  padding: 1em;
+}
+
+.selected {
+  background: rgba(255,255,255,1);
+}
+.content > div {
+  float: left;
+}
+.dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 8px;
+  margin: 0.3em 0;
+  
+  border: 1px solid rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+}
+
+.share {
+  font-size: 18px;
+  color: #444;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.29);
+}
+.entry-header {
+  font-size: 1.3em;
+}
+
+.timestamp {
+  margin: 0 0 10px 0;
+  font-size:10px;
+  color: #888;
+}
+.entry-body > p {
+  margin-bottom: 0.5em;
+  font-family:monaco;
+}
+pre {
+  font-family: monaco;
+}

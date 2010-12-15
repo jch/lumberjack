@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="reset-min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <style type='text/css'>
+      html {
+        background-color: #cacaca;
+      }
+
+      .box {
+        margin: 0 80px;
+        border-top: 1px solid #b6b6b6;
+        border-right: 1px solid #a3a3a3;
+        border-left: 1px solid #a3a3a3;
+        border-bottom: 1px solid #7f7f7f;
+        border-radius: 0px;
+        padding: 2em;
+        text-align: left;
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#eaeaea));
+        -webkit-box-shadow: rgba(0, 0, 0, 0.286719) 0px 1px 3px, rgba(0, 0, 0, 0.286719) 2px 2px 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <style type="text/css" media="screen">
+      .embossed-navigation {
+        background-color: #fff;
+        border-radius: 8px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.386719) 0px 1px 3px;
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f3f3f3));
+        border-bottom: 1px solid #fff;
+        margin: 6px 40px;
+      }
+
+      .embossed-navigation > ul {
+        /*http://24ways.org/2005/centered-tabs-with-css*/
+        text-align: center;
+        padding: 15px 10px;
+      }
+
+      .embossed-navigation li {
+        display: inline;
+      }
+
+      .embossed-navigation a {
+        padding: 8px 10px;
+        margin-right: 20px;
+        margin: 6px 10px 6px 10px;
+        color: #a0a0a0;
+        border-radius: 4px;
+        text-decoration: none;
+      }
+      
+      .embossed-navigation a:hover {
+        /* using borders changes the width + height and causes a jerk */
+        -webkit-box-shadow: rgba(0, 0, 0, 0.08) 1px 1px 0px, rgba(0, 0, 0, 0.08) -1px -1px 0px;
+      }
+      
+      .embossed-navigation a.selected {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #cecece), color-stop(0.1, #e2e2e2), color-stop(0.95, #eaeaea), color-stop(1.0, #ddd));
+        border-top: 1px solid #c0c0c0;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #fff;
+      }
+    </style>
+    <div class="embossed-navigation">
+      <ul>
+        <li><a href="#home" class="selected">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#store">Store</a></li>
+      </ul>
+    </div>
+
+    <style type="text/css" media="screen">
+      .tabbed-navigation {
+        margin: 10px 40px;
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0.0, #fff), color-stop(1.0, #eaeaea));
+        -webkit-box-shadow: rgba(0,0,0,0.28) 0px 1px 3px;
+      }
+      
+      .tabbed-navigation ul {
+        text-align: left;
+        padding: 10px 0px;
+      }
+      
+      .tabbed-navigation li {
+        display: inline;
+        padding: 0 0 0 0;
+      }
+      
+      .tabbed-navigation a {
+        text-decoration: none;
+        color: #888;
+        padding: 10px 18px 11px 16px;
+        /* borders have a gap in the middle */
+        border-right: 1px solid #ccc;
+      }
+      
+      .tabbed-navigation a.selected {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #eaeaea), color-stop(1.0, #cacaca));
+      }
+    </style>
+    <div class="tabbed-navigation">
+      <ul>
+        <li><a href="#home" class="selected">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#store">Store</a></li>
+      </ul>
+    </div>
+    
+    <style type="text/css" media="screen">
+      .overflow-navigation {
+        margin: 0px 40px;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #d2d2d2), color-stop(1.0, #fff));
+      }
+      
+      .overflow-navigation ul {
+        padding: 15px 0px 9px 0;
+        border-bottom: 1px solid #eaeaea;
+      }
+      .overflow-navigation li {
+        display: inline;
+      }
+      .overflow-navigation a {
+        text-decoration: none;
+        color: #888;
+        padding: 10px 16px;
+      }
+      .overflow-navigation a.selected {
+        border-radius: 4px;
+        border-top: 1px solid #f6f6f6;
+        border-left: 1px solid #f6f6f6;
+        border-right: 1px solid #f6f6f6;
+        border-bottom: 1px solid #fff;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #eaeaea), color-stop(1.0, #fff));
+      }
+      
+    </style>
+    <div class="overflow-navigation">
+      <ul>
+        <li><a href="#home" class="selected">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#store">Store</a></li>
+      </ul>
+    </div>
+    <div class="overflow-body" style="text-align: left; background: #fff; height: 20px; margin: 0 40px 6px 40px; padding: 1.5em; color: #444">
+    </div>
+    
+    <style type="text/css" media="screen">
+      .inset-navigation li {
+        display: inline;
+      }
+      .inset-navigation a {
+        text-decoration: none;
+        color: #666;
+        text-shadow: 1px 1px 1px #fff;
+        padding: 10px 16px;
+      }
+      
+      .inset-navigation a.selected {
+        color: #bbb;
+      }
+    </style>
+    <div class="box">
+      <div class="inset-navigation">
+        <ul>
+          <li><a href="#home" class="selected">Home</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#store">Store</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <style type="text/css" media="screen">
+      .vertical-image-navigation {
+        margin: 20px 40px;
+        text-align: left;
+      }
+      
+      .vertical-image-navigation ul {
+        float: left;
+        background: #fff;
+      }
+      .vertical-image-navigation li {
+      }
+      
+      .vertical-image-navigation a {
+        display: block;
+        text-decoration: none;
+        padding: 10px 15px 10px 32px;
+        color: #888;
+      }
+      .vertical-image-navigation a:after {
+        float: right;
+        content: ">";
+        margin-left: 35px;
+        color: #c0c0c0;
+        text-shadow: 1px 1px 1px #fff;
+        border-radius: 10px;
+        padding: 0px 4px;
+        background: #e6e6e6;
+      }
+      
+      .vertical-image-navigation a.selected {
+        color: #e6e6e6;
+        background: #6f6f6f;
+        border-bottom: 1px solid #666;
+      }
+      .vertical-image-navigation a.selected:after {
+        color: #888;
+        text-shadow: none;
+        background: #5a5a5a;
+      }
+    </style>
+    
+    <div class="vertical-image-navigation">
+      <ul>
+        <li><a href="#home" class="selected">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#store">Store</a></li>
+      </ul>
+      <br style="clear:both; margin: 40px;" />
+    </div>
+  </body>
+</html>
