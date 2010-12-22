@@ -1,0 +1,145 @@
+CHANGELOG
+
+2010/12/21
+
+ - http://parsekit.com/ - supports syntax highlighting to attributedstrings via css, spike is similar to lumberjack
+ - ccgus/jstalk - interprocess cocoa scripting
+ 
+
+2010/12/15
+
+ - http://cocoadevcentral.com/d/learn_objectivec/
+ - NSFileWrapper - for file attributes
+ - large files use readFromURL instead of readFromData - http://www.cocoabuilder.com/archive/cocoa/229859-reading-mp3-data-into-nsdocument-using-qtkit-readfromdata-and-qtdatareference.html
+ - http://www.cimgf.com/2008/04/04/cocoa-tutorial-using-nserror-to-great-effect/
+ - http://stackoverflow.com/questions/1115221/how-do-you-enable-javascript-in-a-webview
+ - http://www.cocoarocket.com/articles/windowcontrollers.html *AMAZING*
+ - http://www.fontsquirrel.com/fonts/ChunkFive
+ - http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man3/mktemp.3.html
+ - http://pubs.opengroup.org/onlinepubs/007908799/xsh/sysstat.h.html
+ - http://stackoverflow.com/questions/1439799/how-can-i-get-the-source-code-for-the-linux-utility-tail
+ - http://adobeperson.com/photoshop-basic-drawings/photoshop-design-axe-logo-icon-in-photoshop
+ - http://psd.tutsplus.com/tutorials/interface-tutorials/how-to-create-a-simple-sleek-web-20-site-footer/
+ - http://psd.tutsplus.com/tutorials/designing-tutorials/create-a-shiny-lock-icon-design/
+
+2010/12/14
+
+  - Mac OSX Notification Overview
+  - IO#stat is equivalent to sys/stat.h#stat http://ruby-doc.org/core/classes/IO.html#M002237
+    #restat is written by replacing a file's internal @stat to a re-read one.
+    
+    f = File.open('design.html')  # f.stat is fixed forever
+    def f.restat
+      @stat = File.stat(@path)  # monkey-patch and replace the internal stat
+    end
+    f.readlines
+    f.restat
+    f.readlines
+
+2010/12/09
+
+  - ctail http://ctail.i-want-a-pony.com/
+  - APR http://en.wikipedia.org/wiki/Apache_Portable_Runtime
+  - iChat like view: http://www.mail-archive.com/cocoa-dev@lists.apple.com/msg48522.html
+
+2010/11/18
+
+  - brainstorm algorithm for reading files efficiently
+    f = open file
+    
+
+2010/10/22
+
+  - defaults write com.apple.Xcode XCShowUndoPastSaveWarning NO
+  - Cmd-Shift-D - open file by name, Cmd-Alt-UpArrow header/implementation,Cmd-Alt-F search
+  - interesting links / classes
+    http://www.mail-archive.com/macruby-devel@lists.macosforge.org/msg01820.html - no ruby blocks for obj-c blocks
+    http://www.mail-archive.com/cocoa-dev@lists.apple.com/msg02681.html - custom animating outlineviews
+
+2010/10/21
+
+  - interesting classes / links
+    http://stackoverflow.com/questions/1386310/animating-rows-in-an-nstableview
+    http://cocoawithlove.com/2009/09/whereismymac-snow-leopard-corelocation.html
+    http://cocoawithlove.com/2009/09/optimizing-loading-of-very-large-table.html
+    http://cocoawithlove.com/2009/12/sample-mac-application-with-complete.html
+    http://cocoawithlove.com/2009/06/method-names-in-objective-c.html
+    http://cocoawithlove.com/2008/09/cocoa-application-driven-by-http-data.html
+    http://mattgemmell.com/source
+    http://www.quantum-step.com/download/sources/mySTEP/AppKit/Sources/NSTableView.m
+    http://www.mail-archive.com/cocoa-dev@lists.apple.com/msg04006.html
+      http://katidev.com/blog/2008/02/22/styling-an-nstableview-dttah/
+    http://www.corbinstreehouse.com/blog/category/cocoa/
+
+2010/10/15
+
+  - interesting classes / links
+    http://perspx.com/archives/making-list-views-really-fast/ - subclass NSScrollView
+    and NSView instead of using table views and cells
+    http://www.cocoacast.com/?q=node/59 - nstextview
+    http://www.cocoacast.com/?q=node/40 - fonts & attributed string
+    http://www.cocoacast.com/?q=node/39 - responders and keyboard events
+    http://www.cocoacast.com/?q=node/36 - custom views
+    http://www.cocoacast.com/?q=node/17 - mem Management + debugger
+
+2010/10/14
+
+  - interesting classes / links
+    http://www.cocoabuilder.com/archive/cocoa/140787-reading-data-from-an-nstask.html
+
+2010/10/13
+
+  - Foo.instance_methods(true, true) to show obj-c methods
+
+  - I think NSInputStream in a run loop is the right way to read files
+
+  - 'select' returns an array, and app developer is responsible
+    for checking whether you want to do something w/ the descriptors
+    
+  - adding 'r+' to File.open lets you keep 'select'ing
+    t = 0
+    fd = File.open('entry.rb', 'r+')
+    while true
+      puts t
+      results = Kernel.select([fd], [], [], 15)
+      if f = results.first[0]
+        puts f.readlines.inspect
+      else
+        puts 'nothing to read'
+      end
+      sleep 2.5
+      t += 1
+    end
+
+  - interesting classes / links
+    Unblocking Your User Interface - notifications for idle cycles
+    Application File Management (xcode docs)
+    Concurrency Programming Guide - couldn't get into it, but idea
+    is to have a bg job read incoming log, and emit full log requests
+    as they become available
+
+2010/10/11
+
+  - NSTableView tableView:heightOfRow: method in table view delegate
+    lets you adjust row height
+    
+  - code signing, distribution:
+    http://www.cocoalab.com/?q=codexfab
+    http://www.cocoalab.com/?q=code_signing
+    
+  - GNU 'tail' and BSD 'tail' act differently when you try
+    to poll it for new data through a pipe:
+    
+    while line = system("/usr/bin/tail -F entry.rb").gets
+      puts line
+    end
+
+
+  - NSTableView only allows you to draw custom NSCells
+  
+  - Interesting classes / links
+    http://www.stevestreeting.com/2010/08/08/cocoa-tip-using-custom-table-outline-cells-designed-in-ib/
+    http://www.cocoadev.com/index.pl?TextBox
+    http://www.cocoadev.com/index.pl?ObjectLibraryViews
+    http://www.cocoadev.com/index.pl?ObjectLibrary
+    

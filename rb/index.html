@@ -25,14 +25,17 @@
     }
     
     function addBox() {
-      $('.box-template:last').clone().removeClass('box-template').prependTo('#design');
+      $('.box-template:last').clone().removeClass('box-template').prependTo('#design').show();
     }
     
     function log(s) {
-      $('body').prepend(s);
+      $('body').prepend(decodeURI(s));
+      return true;
     }
     
     function mesg(s) {
+      $ = jQuery;
+      s = decodeURI(s);
       s = s.replace(/^\s+/, "");
       s = s.replace(/\s+$/, "\n");
       s = s.replace(/\[4;36;1m/, "");
@@ -66,6 +69,7 @@
         $('.content:first').addClass('selected');
         addBox();
       }
+      return "success";
     }
     
     function init() {

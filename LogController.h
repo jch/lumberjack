@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
 
+#define kLinesAvailable @"LinesAvailable"
+
 @interface LogController : NSWindowController {
   WebView *logView;
 }
