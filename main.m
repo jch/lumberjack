@@ -10,5 +10,9 @@
 
 int main(int argc, char *argv[])
 {
-    return NSApplicationMain(argc, (const char **) argv);
+  /* Initialize webInspector. */
+  [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"WebKitDeveloperExtras"];
+  [[NSUserDefaults standardUserDefaults] synchronize];
+  
+  return NSApplicationMain(argc, (const char **) argv);
 }
