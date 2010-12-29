@@ -30,8 +30,8 @@
 
 // TODO: hold an internal NSRunLoop reference for each open doc. start/stop as needed.
 - (void) startChecking;
-- (void) stopChecking;
-- (void) close;
+//- (void) stopChecking;
+//- (void) close;
 - (void) checkFile;
 - (void) handleData:(NSNotification*)aNotification;
 @end

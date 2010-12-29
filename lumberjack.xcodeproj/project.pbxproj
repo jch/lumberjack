@@ -10,8 +10,6 @@
 		1DDD582C0DA1D0D100B32029 /* Log.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* Log.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		5532182212CABE44008B962B /* log.html in Resources */ = {isa = PBXBuildFile; fileRef = 5532181F12CABE44008B962B /* log.html */; };
-		5532182312CABE44008B962B /* lumberjack.js in Sources */ = {isa = PBXBuildFile; fileRef = 5532182012CABE44008B962B /* lumberjack.js */; };
-		5532182412CABE44008B962B /* rails2.js in Sources */ = {isa = PBXBuildFile; fileRef = 5532182112CABE44008B962B /* rails2.js */; };
 		5532182512CABE4C008B962B /* lumberjack.js in Resources */ = {isa = PBXBuildFile; fileRef = 5532182012CABE44008B962B /* lumberjack.js */; };
 		5532182612CABE4C008B962B /* rails2.js in Resources */ = {isa = PBXBuildFile; fileRef = 5532182112CABE44008B962B /* rails2.js */; };
 		556C46F612B97EB9003F713E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 556C46F512B97EB9003F713E /* index.html */; };
@@ -653,8 +651,6 @@
 				8D15AC310486D014006FF6A4 /* Log.m in Sources */,
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
 				558A9ABF12B2ED2800F2B380 /* LogController.m in Sources */,
-				5532182312CABE44008B962B /* lumberjack.js in Sources */,
-				5532182412CABE44008B962B /* rails2.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
