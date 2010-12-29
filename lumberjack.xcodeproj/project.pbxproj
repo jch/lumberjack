@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1DDD582C0DA1D0D100B32029 /* Log.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* Log.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
+		5532182212CABE44008B962B /* log.html in Resources */ = {isa = PBXBuildFile; fileRef = 5532181F12CABE44008B962B /* log.html */; };
+		5532182312CABE44008B962B /* lumberjack.js in Sources */ = {isa = PBXBuildFile; fileRef = 5532182012CABE44008B962B /* lumberjack.js */; };
+		5532182412CABE44008B962B /* rails2.js in Sources */ = {isa = PBXBuildFile; fileRef = 5532182112CABE44008B962B /* rails2.js */; };
+		5532182512CABE4C008B962B /* lumberjack.js in Resources */ = {isa = PBXBuildFile; fileRef = 5532182012CABE44008B962B /* lumberjack.js */; };
+		5532182612CABE4C008B962B /* rails2.js in Resources */ = {isa = PBXBuildFile; fileRef = 5532182112CABE44008B962B /* rails2.js */; };
 		556C46F612B97EB9003F713E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 556C46F512B97EB9003F713E /* index.html */; };
 		556C482F12B987A3003F713E /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 556C477712B987A3003F713E /* jquery.js */; };
 		556C483012B987A3003F713E /* reset-min.css in Resources */ = {isa = PBXBuildFile; fileRef = 556C477812B987A3003F713E /* reset-min.css */; };
@@ -40,6 +45,9 @@
 		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		5532181F12CABE44008B962B /* log.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = log.html; path = rb/log.html; sourceTree = "<group>"; };
+		5532182012CABE44008B962B /* lumberjack.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = lumberjack.js; path = rb/lumberjack.js; sourceTree = "<group>"; };
+		5532182112CABE44008B962B /* rails2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = rails2.js; path = rb/rails2.js; sourceTree = "<group>"; };
 		556C46F512B97EB9003F713E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = rb/index.html; sourceTree = "<group>"; };
 		556C477712B987A3003F713E /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.js; path = rb/jquery.js; sourceTree = "<group>"; };
 		556C477812B987A3003F713E /* reset-min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "reset-min.css"; path = "rb/reset-min.css"; sourceTree = "<group>"; };
@@ -249,6 +257,9 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5532181F12CABE44008B962B /* log.html */,
+				5532182012CABE44008B962B /* lumberjack.js */,
+				5532182112CABE44008B962B /* rails2.js */,
 				556C477712B987A3003F713E /* jquery.js */,
 				556C477812B987A3003F713E /* reset-min.css */,
 				556C477912B987A3003F713E /* splash.html */,
@@ -613,6 +624,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5532182212CABE44008B962B /* log.html in Resources */,
+				5532182512CABE4C008B962B /* lumberjack.js in Resources */,
+				5532182612CABE4C008B962B /* rails2.js in Resources */,
 				556C482F12B987A3003F713E /* jquery.js in Resources */,
 				556C484A12B987A3003F713E /* FABridge.js in Resources */,
 				556C48C012B987A3003F713E /* swfobject.js in Resources */,
@@ -639,6 +653,8 @@
 				8D15AC310486D014006FF6A4 /* Log.m in Sources */,
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
 				558A9ABF12B2ED2800F2B380 /* LogController.m in Sources */,
+				5532182312CABE44008B962B /* lumberjack.js in Sources */,
+				5532182412CABE44008B962B /* rails2.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

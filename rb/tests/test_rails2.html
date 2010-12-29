@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>test_lumberjack</title>
+  <link rel="stylesheet" href="qunit.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <script src="../jquery.js"></script>
+  <script src="qunit.js"></script>
+  <script src="../lumberjack.js" type="text/javascript"></script>
+  <script src="../rails2.js" type="text/javascript"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(function() {
+      module("Rails 2");
+      
+      var l1  = "Processing ApplicationController#index (for 127.0.0.1 at 2010-01-21 03:21:21) [GET]";
+      var l2  = "Processing ReviewsController#create (for 127.0.0.1 at 2010-10-20 11:46:43) [POST]";
+      var l3  = "LoadError (Expected /Users/jch/projects/beerpad/app/controllers/beers_controller.rb to define BeersController):";
+      var l4  = "Rendered rescues/_request_and_response (21.7ms)";
+      var l5  = "Rendering rescues/layout (internal_server_error)";
+      var l6  = "  SQL (0.1ms)   SET NAMES 'utf8'";
+      var l7  = "  SQL (0.1ms)   SET SQL_AUTO_IS_NULL=0";
+      var l8  = '  Parameters: {"action"=>"new", "controller"=>"reviews"}';
+      var l9  = '  User Load (7.1ms)   SELECT * FROM "users" WHERE ("users"."id" = E\'1\') LIMIT 1';
+      var l10 = "Redirected to http://localhost:3000/login";
+      var l11 = "Filter chain halted as [:login_required] rendered_or_redirected.";
+      var l12 = "Completed in 93ms (DB: 8) | 302 Found [http://localhost/reviews/new]";
+      var l13 = "  SQL (0.3ms)   SET client_min_messages TO 'panic'";
+      var l14 = "  SQL (0.1ms)   SET client_min_messages TO 'notice'";
+      var l15 = 'ActionController::RoutingError (No route matches "/patients" with {:method=>:get}):';
+      var l16 = "  vendor/bundler_gems/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'";
+      var l17 = "  vendor/bundler_gems/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:441:in `recognize'";
+      var l18 = "  vendor/bundler_gems/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'";
+      var l19 = "  vendor/bundler_gems/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'";
+      var l20 = "  /Users/jch/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'";
+      var l21 = "  vendor/bundler_gems/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111";
+
+      function setup() {
+        Lumberjack.setup({
+          prependTo: '#qunit-fixture'
+        })
+        Lumberjack.prependEntry();
+      }
+
+      function teardown() {
+        Lumberjack.entries().remove();
+      }
+
+      test("Processing lines should start add a new entry and add the line", function() {
+        setup();
+        count = Lumberjack.entries().length;
+        Lumberjack.process(l1);
+        equal(Lumberjack.entries().length, count + 1, "should add an entry");
+        e = Lumberjack.currentEntry();
+        equal(e.find('.controller_action').text(), "ApplicationController#index");
+        equal(e.find('.host').text(), "127.0.0.1");
+        equal(e.find('.timestamp').text(), "2010-01-21 03:21:21");
+        equal(e.find('.method').text(), "GET");
+        teardown();
+      });
+      
+      test("Error should have class .error", function() {
+        setup();
+        count = Lumberjack.entries().length;
+        Lumberjack.process(l3);
+        equal(Lumberjack.entries().length, count, "no new entry should've been added");
+        e = Lumberjack.currentEntry();
+        equal(e.find('.body > .error').length, 1, "should be an error line");
+        teardown();
+      });
+      
+      test("Ignore SQL noise", function() {
+        setup();
+        Lumberjack.process(l6);
+        Lumberjack.process(l7);
+        Lumberjack.process(l13);
+        Lumberjack.process(l14);
+        equal(Lumberjack.currentEntry().find('.body').html(), "");
+        teardown();
+      });
+      
+      test("Render messages should have class .render", function() {
+        setup();
+        Lumberjack.process(l4);
+        Lumberjack.process(l5);
+        e = Lumberjack.currentEntry();
+        equal(e.find('.body > .render').length, 2, "should be render lines");
+        teardown();
+      });
+      
+      test("Redirect messages should have class .redirect", function() {
+        setup();
+        Lumberjack.process(l10);
+        e = Lumberjack.currentEntry();
+        equal(e.find('.body > .redirect').length, 1, "should be redirect lines");
+        teardown();
+      });
+
+      test("Params should have class .params", function() {
+        setup();
+        Lumberjack.process(l8);
+        e = Lumberjack.currentEntry();
+        equal(e.find('.body > .params').length, 1, "should be params lines");
+        teardown();
+      });
+      
+      test("Stacktrace lines should have class .stacktrace", function() {
+        setup();
+        Lumberjack.process(l16);
+        Lumberjack.process(l17);
+        Lumberjack.process(l18);
+        Lumberjack.process(l19);
+        Lumberjack.process(l20);
+        Lumberjack.process(l21);
+        e = Lumberjack.currentEntry();
+        equal(e.find('.body > .stacktrace').length, 6, "should be stacktrace lines");
+        teardown();
+      });
+      
+    });
+  </script>
+</head>
+<body>
+  <h1 id="qunit-header">Rails 2 Rules</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="qunit-fixture">
+    test markup, will be hidden
+  </div>
+</body>

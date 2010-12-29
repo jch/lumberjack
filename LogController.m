@@ -24,7 +24,7 @@
   NSURL *url = [[self document] fileURL];
 
   NSString *splashPath = [[NSBundle mainBundle] pathForResource: @"splash" ofType: @"html"];
-  NSString *indexPath = [[NSBundle mainBundle] pathForResource: @"index" ofType: @"html"];
+  NSString *indexPath = [[NSBundle mainBundle] pathForResource: @"log" ofType: @"html"];
   NSString *filePath = (url ? indexPath : splashPath);
   NSURL *baseURL = [NSURL fileURLWithPath:[splashPath stringByDeletingLastPathComponent]];
 
@@ -40,7 +40,7 @@
 {
   NSString *lines = [[aNotification userInfo] objectForKey:@"lines"];
   lines = [lines stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-  NSString *js = [NSString stringWithFormat:@"mesg(\"%@\")", lines];
+  NSString *js = [NSString stringWithFormat:@"Lumberjack.process(\"%@\")", lines];
   NSLog(@"JSSSSS: %@", js);
   NSLog(@"js returned: %@", [[logView windowScriptObject] evaluateWebScript:js]);
 }

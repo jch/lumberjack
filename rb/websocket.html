@@ -2,9 +2,28 @@
 <html>
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <title>Lumberjack</title>
+  <title>design</title>
+  <script type="text/javascript" src="web-socket-js/swfobject.js"></script>
+  <script type="text/javascript" src="web-socket-js/FABridge.js"></script>
+  <script type="text/javascript" src="web-socket-js/web_socket.js"></script>
   <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript">    
+  <script type="text/javascript">
+    
+    // Set URL of your WebSocketMain.swf here:
+    WEB_SOCKET_SWF_LOCATION = "WebSocketMain.swf";
+    // Set this to dump debug message from Flash to console.log:
+    WEB_SOCKET_DEBUG = true;
+    
+    // Everything below is the same as using standard WebSocket.
+    
+    var ws;
+    
+    function crazy() {
+      //addBox();
+      //$('.box').show();
+      $('.box').remove();
+    }
+    
     function addBox() {
       $('.box-template:last').clone().removeClass('box-template').prependTo('#design').show();
     }
@@ -54,11 +73,38 @@
     }
     
     function init() {
+      
       addBox();
+
+      // Connect to Web Socket.
+      // Change host/port here to your own Web Socket server.
+      ws = new WebSocket("ws://localhost:10081/");
+
+      // Set event handlers.
+      ws.onopen = function() {
+        output("onopen");
+      };
+      ws.onmessage = function(e) {
+        // e.data contains received string.
+        //output("onmessage: " + e.data);
+        $('.box:first').show();
+        var s = e.data;
+        mesg(s);
+      };
+      ws.onclose = function() {
+        output("onclose");
+      };
+      ws.onerror = function() {
+        output("onerror");
+      };
     }
 
     function output(str) {
       console.log("output: " + str);
+      // var log = document.getElementById("log");
+      // var escaped = str.replace(/&/, "&amp;").replace(/</, "&lt;").
+      //   replace(/>/, "&gt;").replace(/"/, "&quot;"); // "
+      // log.innerHTML = escaped + "<br>" + log.innerHTML;
     }
   </script>
 
