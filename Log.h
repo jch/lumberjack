@@ -13,23 +13,18 @@
 
 @interface Log : NSDocument
 {
-  LogController *logController;
-
   NSFileHandle *file;
   BOOL isChecking;
   NSString *readBuffer; // should be char*
+  NSTimer *timer; // periodically checks for log changes
 }
 
-@property (nonatomic, retain) LogController *logController;
 @property (nonatomic) BOOL isChecking;
 @property (nonatomic, retain) NSFileHandle *file;
 @property (nonatomic, retain) NSString *readBuffer;
+@property (nonatomic, retain) NSTimer *timer;
 
-
-// TODO: hold an internal NSRunLoop reference for each open doc. start/stop as needed.
 - (void) startChecking;
-//- (void) stopChecking;
-//- (void) close;
 - (void) checkFile;
 - (void) handleData:(NSNotification*)aNotification;
 - (void) logFileStats;

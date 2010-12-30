@@ -1,5 +1,9 @@
 CHANGELOG
 
+2010/12/30
+
+ - http://www.cocoabuilder.com/archive/cocoa/59848-nsdocument-windowcontrollerdidloadnib-when-are-outlets-connected-to-te-loaded-nib.html
+
 2010/12/29
 
  - sublcass nsdocumentcontroller http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Documents/Tasks/FAQ.html#//apple_ref/doc/uid/20000954-BAJDAFAB

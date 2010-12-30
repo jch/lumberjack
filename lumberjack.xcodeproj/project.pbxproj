@@ -13,15 +13,11 @@
 		5532182512CABE4C008B962B /* lumberjack.js in Resources */ = {isa = PBXBuildFile; fileRef = 5532182012CABE44008B962B /* lumberjack.js */; };
 		5532182612CABE4C008B962B /* rails2.js in Resources */ = {isa = PBXBuildFile; fileRef = 5532182112CABE44008B962B /* rails2.js */; };
 		5532197712CC25CB008B962B /* LJDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5532197612CC25CB008B962B /* LJDocumentController.m */; };
-		556C46F612B97EB9003F713E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 556C46F512B97EB9003F713E /* index.html */; };
+		553219FB12CD06E2008B962B /* LJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 553219FA12CD06E2008B962B /* LJAppDelegate.m */; };
 		556C482F12B987A3003F713E /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 556C477712B987A3003F713E /* jquery.js */; };
 		556C483012B987A3003F713E /* reset-min.css in Resources */ = {isa = PBXBuildFile; fileRef = 556C477812B987A3003F713E /* reset-min.css */; };
 		556C483112B987A3003F713E /* splash.html in Resources */ = {isa = PBXBuildFile; fileRef = 556C477912B987A3003F713E /* splash.html */; };
 		556C483212B987A3003F713E /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 556C477A12B987A3003F713E /* style.css */; };
-		556C484A12B987A3003F713E /* FABridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 556C47A112B987A3003F713E /* FABridge.js */; };
-		556C48C012B987A3003F713E /* swfobject.js in Resources */ = {isa = PBXBuildFile; fileRef = 556C482B12B987A3003F713E /* swfobject.js */; };
-		556C48C112B987A3003F713E /* web_socket.js in Resources */ = {isa = PBXBuildFile; fileRef = 556C482C12B987A3003F713E /* web_socket.js */; };
-		556C48C212B987A3003F713E /* WebSocketMain.swf in Resources */ = {isa = PBXBuildFile; fileRef = 556C482D12B987A3003F713E /* WebSocketMain.swf */; };
 		558A9A7C12B2E4F200F2B380 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558A9A7B12B2E4F200F2B380 /* WebKit.framework */; };
 		558A9ABF12B2ED2800F2B380 /* LogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558A9ABE12B2ED2800F2B380 /* LogController.m */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -49,6 +45,8 @@
 		5532182112CABE44008B962B /* rails2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = rails2.js; path = rb/rails2.js; sourceTree = "<group>"; };
 		5532197512CC25CB008B962B /* LJDocumentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJDocumentController.h; sourceTree = "<group>"; };
 		5532197612CC25CB008B962B /* LJDocumentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJDocumentController.m; sourceTree = "<group>"; };
+		553219F912CD06E2008B962B /* LJAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJAppDelegate.h; sourceTree = "<group>"; };
+		553219FA12CD06E2008B962B /* LJAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJAppDelegate.m; sourceTree = "<group>"; };
 		556C46F512B97EB9003F713E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = rb/index.html; sourceTree = "<group>"; };
 		556C477712B987A3003F713E /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.js; path = rb/jquery.js; sourceTree = "<group>"; };
 		556C477812B987A3003F713E /* reset-min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "reset-min.css"; path = "rb/reset-min.css"; sourceTree = "<group>"; };
@@ -244,6 +242,8 @@
 				558A9ABE12B2ED2800F2B380 /* LogController.m */,
 				5532197512CC25CB008B962B /* LJDocumentController.h */,
 				5532197612CC25CB008B962B /* LJDocumentController.m */,
+				553219F912CD06E2008B962B /* LJAppDelegate.h */,
+				553219FA12CD06E2008B962B /* LJAppDelegate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -631,10 +631,6 @@
 				5532182512CABE4C008B962B /* lumberjack.js in Resources */,
 				5532182612CABE4C008B962B /* rails2.js in Resources */,
 				556C482F12B987A3003F713E /* jquery.js in Resources */,
-				556C484A12B987A3003F713E /* FABridge.js in Resources */,
-				556C48C012B987A3003F713E /* swfobject.js in Resources */,
-				556C48C112B987A3003F713E /* web_socket.js in Resources */,
-				556C46F612B97EB9003F713E /* index.html in Resources */,
 				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
 				1DDD582C0DA1D0D100B32029 /* Log.xib in Resources */,
@@ -642,7 +638,6 @@
 				556C483012B987A3003F713E /* reset-min.css in Resources */,
 				556C483112B987A3003F713E /* splash.html in Resources */,
 				556C483212B987A3003F713E /* style.css in Resources */,
-				556C48C212B987A3003F713E /* WebSocketMain.swf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +652,7 @@
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
 				558A9ABF12B2ED2800F2B380 /* LogController.m in Sources */,
 				5532197712CC25CB008B962B /* LJDocumentController.m in Sources */,
+				553219FB12CD06E2008B962B /* LJAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

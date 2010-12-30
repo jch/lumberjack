@@ -10,14 +10,14 @@
 
 @implementation Log
 
-@synthesize logController;
 @synthesize isChecking;
 @synthesize readBuffer;
 @synthesize file;
+@synthesize timer;
 
 #define kBytesToRead 3000
 
-- (id)init
+- (id) init
 {
   NSLog(@"log init");
   self = [super init];
@@ -33,17 +33,24 @@
   return self;
 }
 
+- (void) dealloc
+{
+  NSLog(@"deallocing log");
+  [self.file dealloc];
+  [super dealloc];
+}
+
 // schedule checkFile in a run loop indefinitely
 - (void) startChecking
 {
   if (!self.file) { return; }
   NSLog(@"### startChecking");
-  [self checkFile];
-  [NSTimer scheduledTimerWithTimeInterval:1.5
-                                   target:self
-                                 selector:@selector(checkFile)
-                                 userInfo:nil
-                                  repeats:YES];
+  [self checkFile]; // check once imediately
+  self.timer = [NSTimer scheduledTimerWithTimeInterval:1.5
+                                                target:self
+                                              selector:@selector(checkFile)
+                                              userInfo:nil
+                                               repeats:YES];
 }
 
 - (void) logFileStats
@@ -56,15 +63,16 @@
     [NSApp presentError:error];
 }
 
+
+// has to read twice at first: 1) read to eof.  2) attempt to read to eof and hang
 - (void) checkFile
 {
-  NSLog(@"=== check_file - checking %u", self.isChecking);
   if (self.isChecking) { return; }
   self.isChecking = YES;
-  NSLog(@"=== check_file - %@", self.file);
+  NSLog(@"=== check_file: retainC %u", [self retainCount]);
   
   [self.file synchronizeFile]; // don't call offsetInFile after, will raise exception
-  [self logFileStats];
+  // [self logFileStats];
   [self.file readToEndOfFileInBackgroundAndNotify];
 }
      
@@ -82,19 +90,26 @@
 
 - (void)makeWindowControllers
 {
-  self.logController = [[LogController alloc] init];
+  LogController *logController = [[LogController alloc] init];
   [self addWindowController:logController];
+  [logController release]; // addWindowController retains
 }
 
-- (void)windowControllerDidLoadNib:(NSWindowController *) aController
+//- (void)windowControllerDidLoadNib:(NSWindowController *) aController
+//{
+//  NSLog(@"log windowControllerDidLoadNib");
+//  // Add any code here that needs to be executed once the windowController has loaded the document's window.
+//  [super windowControllerDidLoadNib:aController];
+//}
+
+//- (void)keyDown:(NSEvent *)theEvent {
+//  
+//}
+
+- (void) close
 {
-  NSLog(@"log windowControllerDidLoadNib");
-  // Add any code here that needs to be executed once the windowController has loaded the document's window.
-  [super windowControllerDidLoadNib:aController];
-}
-
-- (void)keyDown:(NSEvent *)theEvent {
-  
+  if (timer) { [timer invalidate]; }
+  [super close];
 }
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError
