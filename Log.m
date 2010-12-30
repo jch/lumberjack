@@ -14,7 +14,7 @@
 @synthesize isChecking;
 @synthesize readBuffer;
 @synthesize file;
-@synthesize absolutePath, absoluteURL;
+@synthesize absoluteURL;
 
 #define kBytesToRead 3000
 
@@ -25,6 +25,8 @@
   if (self) {
     self.isChecking = NO;
     self.readBuffer = [NSMutableString string];
+    
+    [self setHasUndoManager:NO];
 
     // Add your subclass-specific initialization here.
     // If an error occurs here, send a [self release] message and return nil.    
@@ -51,7 +53,7 @@
   //NSString * const NSFileModificationDate; - NSDate
   NSLog(@"DEBUG: %@", self.absoluteURL.absoluteString);
   NSError *error = nil;
-  NSString *path = @"/Users/jch/projects/beerpad/log/development.log";
+  NSString *path = [self.absoluteURL path];
   NSLog(@"DEBUG:\n  %@", [[NSFileManager defaultManager] attributesOfItemAtPath:path error:&error]);
   if (error)
     [NSApp presentError:error];
@@ -118,7 +120,6 @@
   NSLog(@"log readFromURL");
   NSError *error = nil;
 
-  self.absolutePath = [url absoluteString];
   self.absoluteURL = url;
   self.file = [NSFileHandle fileHandleForReadingFromURL:url error:&error];
   if (error)
