@@ -14,7 +14,6 @@
 @interface Log : NSDocument
 {
   LogController *logController;
-  NSURL *absoluteURL;
 
   NSFileHandle *file;
   BOOL isChecking;
@@ -23,7 +22,6 @@
 
 @property (nonatomic, retain) LogController *logController;
 @property (nonatomic) BOOL isChecking;
-@property (nonatomic, retain) NSURL *absoluteURL;
 @property (nonatomic, retain) NSFileHandle *file;
 @property (nonatomic, retain) NSString *readBuffer;
 

@@ -14,7 +14,6 @@
 @synthesize isChecking;
 @synthesize readBuffer;
 @synthesize file;
-@synthesize absoluteURL;
 
 #define kBytesToRead 3000
 
@@ -49,11 +48,9 @@
 
 - (void) logFileStats
 {
-  //NSString * const NSFileSize; - unsigned int bytes
-  //NSString * const NSFileModificationDate; - NSDate
-  NSLog(@"DEBUG: %@", self.absoluteURL.absoluteString);
   NSError *error = nil;
-  NSString *path = [self.absoluteURL path];
+  NSString *path = [[self fileURL] path];
+  NSLog(@"DEBUG: %@", path);
   NSLog(@"DEBUG:\n  %@", [[NSFileManager defaultManager] attributesOfItemAtPath:path error:&error]);
   if (error)
     [NSApp presentError:error];
@@ -120,7 +117,6 @@
   NSLog(@"log readFromURL");
   NSError *error = nil;
 
-  self.absoluteURL = url;
   self.file = [NSFileHandle fileHandleForReadingFromURL:url error:&error];
   if (error)
     [NSApp presentError:error];
