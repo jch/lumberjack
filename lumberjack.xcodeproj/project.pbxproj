@@ -12,6 +12,7 @@
 		5532182212CABE44008B962B /* log.html in Resources */ = {isa = PBXBuildFile; fileRef = 5532181F12CABE44008B962B /* log.html */; };
 		5532182512CABE4C008B962B /* lumberjack.js in Resources */ = {isa = PBXBuildFile; fileRef = 5532182012CABE44008B962B /* lumberjack.js */; };
 		5532182612CABE4C008B962B /* rails2.js in Resources */ = {isa = PBXBuildFile; fileRef = 5532182112CABE44008B962B /* rails2.js */; };
+		5532197712CC25CB008B962B /* LJDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5532197612CC25CB008B962B /* LJDocumentController.m */; };
 		556C46F612B97EB9003F713E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 556C46F512B97EB9003F713E /* index.html */; };
 		556C482F12B987A3003F713E /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 556C477712B987A3003F713E /* jquery.js */; };
 		556C483012B987A3003F713E /* reset-min.css in Resources */ = {isa = PBXBuildFile; fileRef = 556C477812B987A3003F713E /* reset-min.css */; };
@@ -46,6 +47,8 @@
 		5532181F12CABE44008B962B /* log.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = log.html; path = rb/log.html; sourceTree = "<group>"; };
 		5532182012CABE44008B962B /* lumberjack.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = lumberjack.js; path = rb/lumberjack.js; sourceTree = "<group>"; };
 		5532182112CABE44008B962B /* rails2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = rails2.js; path = rb/rails2.js; sourceTree = "<group>"; };
+		5532197512CC25CB008B962B /* LJDocumentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJDocumentController.h; sourceTree = "<group>"; };
+		5532197612CC25CB008B962B /* LJDocumentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJDocumentController.m; sourceTree = "<group>"; };
 		556C46F512B97EB9003F713E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = rb/index.html; sourceTree = "<group>"; };
 		556C477712B987A3003F713E /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.js; path = rb/jquery.js; sourceTree = "<group>"; };
 		556C477812B987A3003F713E /* reset-min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "reset-min.css"; path = "rb/reset-min.css"; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 				2A37F4ACFDCFA73011CA2CEA /* Log.m */,
 				558A9ABD12B2ED2800F2B380 /* LogController.h */,
 				558A9ABE12B2ED2800F2B380 /* LogController.m */,
+				5532197512CC25CB008B962B /* LJDocumentController.h */,
+				5532197612CC25CB008B962B /* LJDocumentController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -651,6 +656,7 @@
 				8D15AC310486D014006FF6A4 /* Log.m in Sources */,
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
 				558A9ABF12B2ED2800F2B380 /* LogController.m in Sources */,
+				5532197712CC25CB008B962B /* LJDocumentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
