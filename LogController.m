@@ -30,19 +30,21 @@
 
   NSString *html = [NSString stringWithContentsOfFile: filePath encoding: NSUTF8StringEncoding error: nil];
   [[logView mainFrame] loadHTMLString: html baseURL: baseURL];
-  
-  
+
   // register for linesAvailable notifications and kick off the check loop:
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(linesAvailable:) name:kLinesAvailable object:[self document]];
 }
 
 - (void) linesAvailable:(NSNotification*)aNotification
 {
-  NSString *lines = [[aNotification userInfo] objectForKey:@"lines"];
-  lines = [lines stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-  NSString *js = [NSString stringWithFormat:@"Lumberjack.process(\"%@\")", lines];
-  NSLog(@"JSSSSS: %@", js);
-  NSLog(@"js returned: %@", [[logView windowScriptObject] evaluateWebScript:js]);
+  NSArray *lines = [[aNotification userInfo] objectForKey:@"lines"];
+  for(NSString* line in lines) {
+    line = [line stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *js = [NSString stringWithFormat:@"Lumberjack.process(\"%@\")", line];
+    [[logView windowScriptObject] evaluateWebScript:js];
+    // NSLog(@"JSSSSS: %@", js);
+    // NSLog(@"js returned: %@", );
+  }
 }
 
 - (NSString *)windowTitleForDocumentDisplayName:(NSString *)displayName
@@ -53,25 +55,15 @@
 }
 
 #pragma mark WebView frameDelegate Methods
-//- (void)webView:(WebView *)webView windowScriptObjectAvailable:(WebScriptObject *)windowScriptObject
 - (void)webView:(WebView *)sender didClearWindowObject:(WebScriptObject *)windowObject forFrame:(WebFrame *)frame
 {
   NSLog(@"before resources loaded");
-  //  NSLog("### %@", (NSString*) [[webView windowScriptObject] evaluateWebScript:@"$('.box:first').text()"]);
-  //  NSArray *args = [NSArray arrayWithObjects:@".box:first", nil];
-  //  NSLog(@"### %@", [[sender windowScriptObject] callWebScriptMethod:@"$" withArguments:args]);
 }
 
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {
   NSLog(@"after resources loaded");
-  [[self document] checkFile];
-  //NSArray *args = [NSArray arrayWithObjects:@".box:first", nil];
-  //NSLog(@"### %@", [[sender windowScriptObject] callWebScriptMethod:@"$" withArguments:args]);
-  //[[sender windowScriptObject] evaluateWebScript:@"crazy()"];
-  // jQuery works, but $ doesn't
-  //[[sender windowScriptObject] evaluateWebScript:@"jQuery('.box').hide()"];
-  //[[sender windowScriptObject] evaluateWebScript:@"log('baz')"];
+  [[self document] startChecking]; // NSDocument doesn't know checkFile, but can't cast b/c then would need to import
 }
 
 @end

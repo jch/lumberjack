@@ -15,16 +15,19 @@
 {
   LogController *logController;
 
+  NSString *absolutePath;
+  NSURL *absoluteURL;
+
   NSFileHandle *file;
-  NSInteger fileOffset;
   BOOL isChecking;
   NSString *readBuffer; // should be char*
 }
 
 @property (nonatomic, retain) LogController *logController;
 @property (nonatomic) BOOL isChecking;
+@property (nonatomic, retain) NSString *absolutePath;
+@property (nonatomic, retain) NSURL *absoluteURL;
 @property (nonatomic, retain) NSFileHandle *file;
-@property (nonatomic) NSInteger fileOffset;
 @property (nonatomic, retain) NSString *readBuffer;
 
 
@@ -34,4 +37,5 @@
 //- (void) close;
 - (void) checkFile;
 - (void) handleData:(NSNotification*)aNotification;
+- (void) logFileStats;
 @end

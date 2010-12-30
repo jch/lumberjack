@@ -13,9 +13,10 @@
 @synthesize logController;
 @synthesize isChecking;
 @synthesize readBuffer;
-@synthesize file, fileOffset;
+@synthesize file;
+@synthesize absolutePath, absoluteURL;
 
-#define kBytesToRead 500
+#define kBytesToRead 3000
 
 - (id)init
 {
@@ -31,36 +32,53 @@
   return self;
 }
 
+// schedule checkFile in a run loop indefinitely
 - (void) startChecking
 {
-  
+  if (!self.file) { return; }
+  NSLog(@"### startChecking");
+  [self checkFile];
+  [NSTimer scheduledTimerWithTimeInterval:1.5
+                                   target:self
+                                 selector:@selector(checkFile)
+                                 userInfo:nil
+                                  repeats:YES];
+}
+
+- (void) logFileStats
+{
+  //NSString * const NSFileSize; - unsigned int bytes
+  //NSString * const NSFileModificationDate; - NSDate
+  NSLog(@"DEBUG: %@", self.absoluteURL.absoluteString);
+  NSError *error = nil;
+  NSString *path = @"/Users/jch/projects/beerpad/log/development.log";
+  NSLog(@"DEBUG:\n  %@", [[NSFileManager defaultManager] attributesOfItemAtPath:path error:&error]);
+  if (error)
+    [NSApp presentError:error];
 }
 
 - (void) checkFile
 {
-  NSLog(@"=== check_file");
+  NSLog(@"=== check_file - checking %u", self.isChecking);
   if (self.isChecking) { return; }
-  self.isChecking = true;
-    
-  // each iteration uses a fresh NSFileHandle, remove the old handler and close the old file
-  [[NSNotificationCenter defaultCenter] removeObserver:self name: NSFileHandleReadToEndOfFileCompletionNotification object: self.file];
-  [self.file closeFile];
-    
-  if (self.file = [NSFileHandle fileHandleForReadingFromURL:[self fileURL] error:nil]) {
-    [self.file seekToFileOffset:self.fileOffset];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(handleData:) name: NSFileHandleReadToEndOfFileCompletionNotification object: self.file];
-  }
-      
-  // readInBackgroundAndNotify, and corresponding notification for incremental
+  self.isChecking = YES;
+  NSLog(@"=== check_file - %@", self.file);
+  
+  [self.file synchronizeFile]; // don't call offsetInFile after, will raise exception
+  [self logFileStats];
   [self.file readToEndOfFileInBackgroundAndNotify];
 }
      
 - (void) handleData:(NSNotification*)aNotification {
   NSData *data = [[aNotification userInfo] objectForKey:NSFileHandleNotificationDataItem];
-  NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]; // OPTIMIZE: construct entire strings at a time.
-  NSDictionary *retval = [NSDictionary dictionaryWithObjectsAndKeys:s, @"lines", nil];
-  // TODO: break into lines, buffer partial lines
+  NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
+  // TODO: buffer partial lines
+  NSArray *lines = [s componentsSeparatedByString:@"\n"];
+  NSDictionary *retval = [NSDictionary dictionaryWithObjectsAndKeys:lines, @"lines", nil];
+
   [[NSNotificationCenter defaultCenter] postNotificationName:kLinesAvailable object:self userInfo:retval];
+  self.isChecking = NO;
 }
 
 - (void)makeWindowControllers
@@ -83,9 +101,7 @@
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError
 {
   // Insert code here to write your document to data of the specified type. If the given outError != NULL, ensure that you set *outError when returning nil.
-  
   // You can also choose to override -fileWrapperOfType:error:, -writeToURL:ofType:error:, or -writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
-  
   // For applications targeted for Panther or earlier systems, you should use the deprecated API -dataRepresentationOfType:. In this case you can also choose to override -fileWrapperRepresentationOfType: or -writeToFile:ofType: instead.
   
   if ( outError != NULL ) {
@@ -94,35 +110,34 @@
 	return nil;
 }
 
-- (BOOL)readFromURL:(NSURL *)absoluteURL ofType:(NSString *)typeName error:(NSError **)outError
+- (BOOL)readFromURL:(NSURL *)url ofType:(NSString *)typeName error:(NSError **)outError
 {
   // Insert code here to read your document from the given data of the specified type.  If the given outError != NULL, ensure that you set *outError when returning NO.
-  
-  // You can also choose to override -readFromData:ofType:error, -readFromFileWrapper:ofType:error: or -readFromURL:ofType:error: instead. 
-  
+  // You can also choose to override -readFromData:ofType:error, -readFromFileWrapper:ofType:error: or -readFromURL:ofType:error: instead.   
   // For applications targeted for Panther or earlier systems, you should use the deprecated API -loadDataRepresentation:ofType. In this case you can also choose to override -readFromFile:ofType: or -loadFileWrapperRepresentation:ofType: instead.
-
-  // TODO: connect to [self fileURL] or 'data' and keep internal state to read from
   NSLog(@"log readFromURL");
   NSError *error = nil;
-  self.file = [NSFileHandle fileHandleForReadingFromURL:absoluteURL error:&error];
+
+  self.absolutePath = [url absoluteString];
+  self.absoluteURL = url;
+  self.file = [NSFileHandle fileHandleForReadingFromURL:url error:&error];
   if (error)
     [NSApp presentError:error];
   else if(self.file == nil) {
-    NSLog(@"no such file: %@", absoluteURL);
+    NSLog(@"no such file: %@", url);
   }
 
-  self.fileOffset = [file seekToEndOfFile] - kBytesToRead;
-  if (self.fileOffset < 0) {
-    self.fileOffset = 0;
+  unsigned long long fileOffset = [file seekToEndOfFile] - kBytesToRead;
+  if (fileOffset < 0) {
+    fileOffset = 0;
   }
+  [self.file seekToFileOffset: fileOffset];
 
   if ( outError != NULL ) {
 		*outError = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:NULL];
 	}
+  [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(handleData:) name: NSFileHandleReadToEndOfFileCompletionNotification object: self.file];
   return YES;
 }
-
-
 
 @end

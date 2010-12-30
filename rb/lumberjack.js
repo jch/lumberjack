@@ -47,6 +47,11 @@ Lumberjack.currentEntry = function() {
   return this.entries().filter('.selected');
 }
 
+Lumberjack.currentEntryEmpty = function() {
+  return this.currentEntry().find('.controller_action').text() != "" ||
+         this.currentEntry().find('.body').children().length > 0;
+}
+
 // Process a line against rules specified in Lumberjack.rules
 Lumberjack.process = function(line) {
   for(var i=0; i<this.rules.length; i++) {
@@ -71,8 +76,8 @@ Lumberjack.process = function(line) {
 
 // destination - selector or jquery object of where to prepend new entry
 Lumberjack.prependEntry = function(destination) {
-  var entryHtml = '<div class="entry selected">' +
-                  '  <div class="content">' +
+  var entryHtml = '<div class="entry selected box">' +
+                  '  <div class="content selected">' +
                   '   <div class="header">' +
                   '     <p class="controller_action"></p>' +
                   '     <p class="timestamp"></p>' +
@@ -80,7 +85,6 @@ Lumberjack.prependEntry = function(destination) {
                   '     <p class="method"></p>' +
                   '   </div>' +
                   '   <div class="body"></div>' +
-                  '   <!-- no more pre-s -->' +
                   '  </div>' +
                   '</div>';
   var entryElement = $(entryHtml);

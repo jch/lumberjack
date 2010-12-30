@@ -9,8 +9,10 @@ body {
   font-size: 13px;
 }
 div, p {margin:0; padding:0;}
+
 .box {
-  margin: 0 40px;
+  margin: 0px 0px;
+  margin-bottom: 1em;
   border-top: 1px solid #b6b6b6;
   border-right: 1px solid #a3a3a3;
   border-left: 1px solid #a3a3a3;
@@ -18,10 +20,12 @@ div, p {margin:0; padding:0;}
   -webkit-box-shadow: rgba(0, 0, 0, 0.286719) 0px 1px 3px;
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#eaeaea));
   -webkit-box-shadow: rgba(0, 0, 0, 0.286719) 2px 2px 3px;
+  border-radius: 6px;
 }
 
 .box > .content {
   position: relative;
+  border-radius: 6px;
   min-height: 150px;
   border: 1px solid #fff;
   padding: 1em;
@@ -30,9 +34,7 @@ div, p {margin:0; padding:0;}
 .selected {
   background: rgba(255,255,255,1);
 }
-.content > div {
-  float: left;
-}
+
 .dot {
   display: block;
   width: 10px;
@@ -50,7 +52,7 @@ div, p {margin:0; padding:0;}
   color: #444;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.29);
 }
-.entry-header {
+.controller_action {
   font-size: 1.3em;
 }
 

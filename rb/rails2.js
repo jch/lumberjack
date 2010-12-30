@@ -3,6 +3,7 @@ Lumberjack.rules = [
   // cleanup sql color marks
   [/./, function(line, matches){
     var s = decodeURI(line);
+    s = s.replace(/%23/, "#"); // decodeURI didn't get
     s = s.replace(/^\s+/, "");
     s = s.replace(/\s+$/, "\n");
     s = s.replace(/\[4;36;1m/, "");
@@ -11,17 +12,16 @@ Lumberjack.rules = [
     s = s.replace(/\[0m   \[0m/, "\t");
     s = s.replace(/\[0m/, "");
 
-    // indent lines not starting with Processing
-    // if(s.search(/^Processing/) == -1) {
-    //   s = "&nbsp;&nbsp;" + s;
-    // }
     return [s, true];
   }],
 
   // start new entry
   [/Processing (\w+#\w+)/, function(line, matches) {
     extras = line.match(/\(for (.*?) at (.*?)\) \[(.*?)\]/);
-    Lumberjack.prependEntry();
+    // create a new entry if the last one isn't blank
+    if(Lumberjack.currentEntryEmpty()) {
+      Lumberjack.prependEntry();
+    }
     Lumberjack.appendLineToCurrentEntry('.controller_action', matches[1]);
     Lumberjack.appendLineToCurrentEntry('.host', extras[1]);
     Lumberjack.appendLineToCurrentEntry('.timestamp', extras[2]);
@@ -36,7 +36,7 @@ Lumberjack.rules = [
 
   // wrap all lines in a p
   [/./, function(line, matches) {
-    var myLine = jQuery("p").append(line).outerHTML();
+    var myLine = jQuery("<p>").append(line).outerHTML();
     return [myLine, true];
   }],
   
