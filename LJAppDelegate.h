@@ -10,7 +10,7 @@
 
 
 @interface LJAppDelegate : NSObject {
-
+  BOOL applicationHasStarted;
 }
 
 @end

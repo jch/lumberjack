@@ -1,7 +1,12 @@
 CHANGELOG
 
+2011/01/02
+
+ - http://cocoawithlove.com/2008/05/open-previous-document-on-application.html
+
 2010/12/30
 
+ - http://www.cocoabuilder.com/archive/cocoa/282803-making-beta-version-expire.html (check date, nsapp terminate:self)
  - http://www.cocoabuilder.com/archive/cocoa/59848-nsdocument-windowcontrollerdidloadnib-when-are-outlets-connected-to-te-loaded-nib.html
 
 2010/12/29

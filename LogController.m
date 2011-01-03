@@ -66,4 +66,12 @@
   [[self document] startChecking]; // NSDocument doesn't know checkFile, but can't cast b/c then would need to import
 }
 
+//- (void)webView:(WebView *)sender didStartProvisionalLoadForFrame:(WebFrame *)frame {
+//  if(![frame parentFrame]) {
+//    NSLog(@"REALODING didstartprovisional!!!!!");
+//    // There is no parent frame so this is the main frame.
+//  }
+//}
+
+
 @end

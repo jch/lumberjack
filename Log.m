@@ -139,10 +139,8 @@
     NSLog(@"no such file: %@", url);
   }
 
-  unsigned long long fileOffset = [file seekToEndOfFile] - kBytesToRead;
-  if (fileOffset < 0) {
-    fileOffset = 0;
-  }
+  unsigned long long eofOffset = [file seekToEndOfFile];
+  unsigned long long fileOffset = (eofOffset < kBytesToRead) ? 0 : eofOffset - kBytesToRead;
   [self.file seekToFileOffset: fileOffset];
 
   if ( outError != NULL ) {
