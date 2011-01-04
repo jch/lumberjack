@@ -33,11 +33,12 @@ div {
   border-left: 1px solid #a3a3a3;
   border-bottom: 1px solid #7f7f7f;
   -webkit-box-shadow: rgba(0, 0, 0, 0.286719) 0px 1px 3px;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#cfcfcf));
+/*  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#cfcfcf));*/
+  background-color: #fcfcfc;
   -webkit-box-shadow: rgba(0, 0, 0, 0.286719) 2px 2px 3px;
   border-radius: 6px;
   padding: 1em;
-  color: #555;
+  color: #777;
 }
 
 .box > .content {

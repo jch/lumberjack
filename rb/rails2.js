@@ -88,15 +88,18 @@ Lumberjack.rules = [
     // FROM ...
     //   AND ... | ...
     if (m = (line.match(/(FROM .*) (WHERE)?/))) {
-      content.append($("<p>").append(m[1]));
+      content.append($("<p>").append(m[1].replace(/WHERE.*/, "")));
     }
     // WHERE ...
     //   AND ... | ...
-    if (m = line.match(/(WHERE.*)/)) {
-      content.append($("<p>").append(m[1]));
+    if (m = line.match(/(WHERE.*) (ORDER BY)?/)) {
+      content.append($("<p>").append(m[1].replace(/ORDER BY.*/, "")));
     }
     // ORDER BY ...
     // LIMIT ...
+    if (m = line.match(/(ORDER BY.*)/)) {
+      content.append($("<p>").append(m[1]));
+    }
     return [sql.outerHTML(), true];
   }],
 
