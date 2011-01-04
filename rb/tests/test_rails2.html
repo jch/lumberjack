@@ -23,6 +23,7 @@
       var l8a = '  Parameters: {"action"=>"index", "region_id"=>"1", "controller"=>"topics"}'
       var l9  = '  User Load (7.1ms)   SELECT * FROM "users" WHERE ("users"."id" = E\'1\') LIMIT 1';
       var l9a = '  Review Load (2.9ms)	SELECT * FROM "reviews" WHERE ("reviews"."status" = E\'published\') ORDER BY reviews.created_at DESC LIMIT 6 OFFSET 0'
+      var l9b = '  Region Load (1.1ms)	SELECT `regions`.* FROM `regions` INNER JOIN `slugs` ON `slugs`.sluggable_id = `regions`.id AND `slugs`.sluggable_type = \'Region\' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = \'1\' AND `slugs`.`name` = \'1\') ORDER BY regions.name asc LIMIT 1'
       var l10 = "Redirected to http://localhost:3000/login";
       var l11 = "Filter chain halted as [:login_required] rendered_or_redirected.";
       var l12 = "Completed in 93ms (DB: 8) | 302 Found [http://localhost/reviews/new]";
@@ -127,15 +128,15 @@
         teardown();
       });
       
-      // test("SQL should have class .sql", function() {
-      //   setup();
-      //   Lumberjack.process(l9);
-      //   Lumberjack.process(l9a);
-      //   e = Lumberjack.currentEntry();
-      //   equal(e.find('.body > .sql').length, 2, "should be sql lines");
-      //   equal(e.find('.body > .sql:last').text(), 'Parameters: {}');
-      //   teardown();
-      // });
+      test("SQL should have class .sql", function() {
+        setup();
+        Lumberjack.process(l9);
+        Lumberjack.process(l9a);
+        Lumberjack.process(l9b);
+        e = Lumberjack.currentEntry();
+        equal(e.find('.body > .sql').length, 3, "should be sql lines");
+        teardown();
+      });
       
     });
   </script>

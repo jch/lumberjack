@@ -72,6 +72,32 @@ Lumberjack.rules = [
     var myLine = $(line).addClass('stacktrace').outerHTML();
     return [myLine, true];
   }],
+  
+  // SQL lines should be split up and prettified
+  [/(.*?)SELECT/, function(line, matches) {
+    var sql = $("<div>").addClass('sql')
+    var content = $("<div>").addClass('content');
+    sql.append($("<p>").addClass("header").append(matches[1]));
+    sql.append(content);
+    
+    // UPDATE | DELETE | SHOW | SELECT ...
+    if (m = line.match(/(SELECT.*?)FROM/)) {
+      content.append($("<p>").append(m[1]));
+    }
+    // FROM ...
+    //   AND ... | ...
+    if (m = line.match(/(FROM.*?)WHERE/)) {
+      content.append($("<p>").append(m[1]));
+    }
+    // WHERE ...
+    //   AND ... | ...
+    if (m = line.match(/(WHERE.*)/)) {
+      content.append($("<p>").append(m[1]));
+    }
+    // ORDER BY ...
+    // LIMIT ...
+    return [sql.outerHTML(), true];
+  }],
 
   // default rule
   [/./, function(line, matches) {
