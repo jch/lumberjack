@@ -81,12 +81,13 @@ Lumberjack.rules = [
     sql.append(content);
     
     // UPDATE | DELETE | SHOW | SELECT ...
-    if (m = line.match(/(SELECT.*?)FROM/)) {
+    if (m = line.match(/(SELECT .*?)FROM/)) {
       content.append($("<p>").append(m[1]));
     }
+
     // FROM ...
     //   AND ... | ...
-    if (m = line.match(/(FROM.*?)WHERE/)) {
+    if (m = (line.match(/(FROM .*) (WHERE)?/))) {
       content.append($("<p>").append(m[1]));
     }
     // WHERE ...

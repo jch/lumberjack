@@ -77,12 +77,14 @@ Lumberjack.process = function(line) {
 // destination - selector or jquery object of where to prepend new entry
 Lumberjack.prependEntry = function(destination) {
   var entryHtml = '<div class="entry selected box">' +
-                  '  <div class="content selected">' +
+                  '  <div class="content">' +
                   '   <div class="header">' +
                   '     <p class="controller_action"></p>' +
-                  '     <p class="timestamp"></p>' +
-                  '     <p class="host"></p>' +
-                  '     <p class="method"></p>' +
+                  '     <div class="subdetails">' +
+                  '       <p class="timestamp"></p>' +
+                  '       (<p class="method"></p>' +
+                  '       <p class="host"></p>)' +
+                  '     </div>' +
                   '   </div>' +
                   '   <div class="body"></div>' +
                   '  </div>' +
