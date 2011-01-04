@@ -17,7 +17,7 @@ Lumberjack.rules = [
 
   // start new entry
   [/Processing (\w+#\w+)/, function(line, matches) {
-    extras = line.match(/\(for (.*?) at (.*?)\) \[(.*?)\]/);
+    var extras = line.match(/\(for (.*?) at (.*?)\) \[(.*?)\]/);
     // create a new entry if the last one isn't blank
     if(Lumberjack.currentEntryEmpty()) {
       Lumberjack.prependEntry();
@@ -58,9 +58,12 @@ Lumberjack.rules = [
     return [myLine, true];
   }],
   
-  // params lines should have class params
+  // params lines should have class params and remove controller and action
   [/.*?Param/, function(line, matches) {
+    line = line.replace(/,? ?"action"=&gt;".*?",? ?/, "");
+    line = line.replace(/,? ?"controller"=&gt;".*?",? ?/, "");
     var myLine = $(line).addClass('params').outerHTML();
+    
     return [myLine, true];
   }],
   

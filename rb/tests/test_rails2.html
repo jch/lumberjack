@@ -12,14 +12,17 @@
       module("Rails 2");
       
       var l1  = "Processing ApplicationController#index (for 127.0.0.1 at 2010-01-21 03:21:21) [GET]";
-      var l2  = "Processing ReviewsController#create (for 127.0.0.1 at 2010-10-20 11:46:43) [POST]";
+      var l2Date = new Date();
+      var l2  = "Processing ReviewsController#create (for 127.0.0.1 at " + l2Date.format("yyyy-mm-dd hh:mm:ss") + ") [POST]";
       var l3  = "LoadError (Expected /Users/jch/projects/beerpad/app/controllers/beers_controller.rb to define BeersController):";
       var l4  = "Rendered rescues/_request_and_response (21.7ms)";
       var l5  = "Rendering rescues/layout (internal_server_error)";
       var l6  = "  SQL (0.1ms)   SET NAMES 'utf8'";
       var l7  = "  SQL (0.1ms)   SET SQL_AUTO_IS_NULL=0";
       var l8  = '  Parameters: {"action"=>"new", "controller"=>"reviews"}';
+      var l8a = '  Parameters: {"action"=>"index", "region_id"=>"1", "controller"=>"topics"}'
       var l9  = '  User Load (7.1ms)   SELECT * FROM "users" WHERE ("users"."id" = E\'1\') LIMIT 1';
+      var l9a = '  Review Load (2.9ms)	SELECT * FROM "reviews" WHERE ("reviews"."status" = E\'published\') ORDER BY reviews.created_at DESC LIMIT 6 OFFSET 0'
       var l10 = "Redirected to http://localhost:3000/login";
       var l11 = "Filter chain halted as [:login_required] rendered_or_redirected.";
       var l12 = "Completed in 93ms (DB: 8) | 302 Found [http://localhost/reviews/new]";
@@ -97,11 +100,17 @@
         teardown();
       });
 
-      test("Params should have class .params", function() {
+      test("Params should have class .params and no controller and action", function() {
         setup();
         Lumberjack.process(l8);
         e = Lumberjack.currentEntry();
         equal(e.find('.body > .params').length, 1, "should be params lines");
+        equal(e.find('.body > .params:last').text(), 'Parameters: {}');
+
+        Lumberjack.process(l8a);
+        e = Lumberjack.currentEntry();
+        equal(e.find('.body > .params').length, 2, "should be params lines");
+        equal(e.find('.body > .params:last').text(), 'Parameters: {"region_id"=>"1"}');
         teardown();
       });
       
@@ -117,6 +126,16 @@
         equal(e.find('.body > .stacktrace').length, 6, "should be stacktrace lines");
         teardown();
       });
+      
+      // test("SQL should have class .sql", function() {
+      //   setup();
+      //   Lumberjack.process(l9);
+      //   Lumberjack.process(l9a);
+      //   e = Lumberjack.currentEntry();
+      //   equal(e.find('.body > .sql').length, 2, "should be sql lines");
+      //   equal(e.find('.body > .sql:last').text(), 'Parameters: {}');
+      //   teardown();
+      // });
       
     });
   </script>
