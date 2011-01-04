@@ -43,7 +43,7 @@
 			<object class="NSWindowTemplate" id="275939982">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{587, 244}, {489, 605}}</string>
+				<string key="NSWindowRect">{{587, 126}, {600, 723}}</string>
 				<int key="NSWTFlags">1886913536</int>
 				<string key="NSWindowTitle">pharmmd/development</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -79,7 +79,7 @@
 									<string>public.url-name</string>
 								</object>
 							</object>
-							<string key="NSFrameSize">{489, 605}</string>
+							<string key="NSFrameSize">{600, 723}</string>
 							<reference key="NSSuperview" ref="568628114"/>
 							<reference key="NSNextKeyView"/>
 							<string key="FrameName"/>
@@ -92,14 +92,12 @@
 										<bool key="EncodedWithXMLCoder">YES</bool>
 										<string>WebKitDefaultFixedFontSize</string>
 										<string>WebKitDefaultFontSize</string>
-										<string>WebKitJavaEnabled</string>
 										<string>WebKitMinimumFontSize</string>
 									</object>
 									<object class="NSMutableArray" key="dict.values">
 										<bool key="EncodedWithXMLCoder">YES</bool>
 										<integer value="12"/>
 										<integer value="12"/>
-										<boolean value="NO"/>
 										<integer value="1"/>
 									</object>
 								</object>
@@ -108,7 +106,7 @@
 							<bool key="AllowsUndo">YES</bool>
 						</object>
 					</object>
-					<string key="NSFrameSize">{489, 605}</string>
+					<string key="NSFrameSize">{600, 723}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1680, 1028}}</string>
@@ -231,9 +229,9 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.WebKitIBPlugin</string>
-					<string>{{399, 42}, {489, 605}}</string>
+					<string>{{544, 69}, {600, 723}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{399, 42}, {489, 605}}</string>
+					<string>{{544, 69}, {600, 723}}</string>
 					<integer value="1"/>
 					<string>{{201, 387}, {507, 413}}</string>
 					<integer value="1"/>
