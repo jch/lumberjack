@@ -1,7 +1,15 @@
 CHANGELOG
 
+2011/01/05
+
+ - http://stackoverflow.com/questions/3833241/adding-secondary-text-to-window-title-bar-in-cocoa
+ - http://iloveco.de/adding-a-titlebar-accessory-view-to-a-window/
+
 2011/01/04
 
+ - http://lists.apple.com/archives/webkitsdk-dev/2008/Feb/msg00032.html (sucks, no incremental find in webview, only nstextview)
+ - http://www.cocoabuilder.com/archive/cocoa/198628-how-to-implement-incremental-search-like-safari-using-webview.html (possibly use js)
+ - http://www.cocoabuilder.com/archive/cocoa/79662-pass-command-line-arguments-to-the-app.html
  - http://stackoverflow.com/questions/4507278/title-bar-buttons-and-custom-title-bars
  - http://whomwah.com/2009/04/11/using-cocoa-to-keep-an-app-window-always-on-top/
 

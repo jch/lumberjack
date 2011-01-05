@@ -11,6 +11,7 @@
 @implementation Log
 
 @synthesize isChecking;
+@synthesize isPinned;
 @synthesize readBuffer;
 @synthesize file;
 @synthesize timer;
@@ -23,6 +24,7 @@
   self = [super init];
   if (self) {
     self.isChecking = NO;
+    self.isPinned = YES; // TODO: should come from preferences
     self.readBuffer = [NSMutableString string];
     
     [self setHasUndoManager:NO];

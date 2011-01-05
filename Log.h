@@ -23,6 +23,7 @@
 @property (nonatomic, retain) NSFileHandle *file;
 @property (nonatomic, retain) NSString *readBuffer;
 @property (nonatomic, retain) NSTimer *timer;
+@property (nonatomic) BOOL isPinned;
 
 - (void) startChecking;
 - (void) checkFile;

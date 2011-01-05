@@ -21,6 +21,8 @@
 
 - (void) awakeFromNib {
   NSLog(@"LC: awakeFrom Nib %@", [self document]);
+  [self composeInterface];
+
   NSURL *url = [[self document] fileURL];
 
   NSString *splashPath = [[NSBundle mainBundle] pathForResource: @"splash" ofType: @"html"];
@@ -33,6 +35,11 @@
 
   // register for linesAvailable notifications and kick off the check loop:
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(linesAvailable:) name:kLinesAvailable object:[self document]];
+}
+
+- (void) composeInterface
+{
+  [(AVWindow*)[self window] setTitlebarAccessoryView:pinView];
 }
 
 - (void) linesAvailable:(NSNotification*)aNotification
@@ -54,6 +61,19 @@
   return title;
 }
 
+#pragma mark -
+#pragma mark Window Delegate
+
+- (void)windowDidResignMain:(NSNotification *)notification
+{
+  if ([[self document] isPinned]) {
+    [[self window] setLevel:NSFloatingWindowLevel];
+  } else {
+    [[self window] setLevel:NSNormalWindowLevel];
+  }
+}
+
+#pragma mark -
 #pragma mark WebView frameDelegate Methods
 - (void)webView:(WebView *)sender didClearWindowObject:(WebScriptObject *)windowObject forFrame:(WebFrame *)frame
 {

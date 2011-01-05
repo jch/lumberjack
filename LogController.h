@@ -8,13 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
+#import "AVWindow.h"
 
 #define kLinesAvailable @"LinesAvailable"
 
 @interface LogController : NSWindowController {
   WebView *logView;
+  IBOutlet NSView *pinView; // pin a window to stay on top
 }
 
 @property (nonatomic, retain) IBOutlet WebView *logView;
+
+-(void) composeInterface;
 
 @end
