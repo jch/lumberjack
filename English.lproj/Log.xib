@@ -21,8 +21,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
 			<integer value="100054"/>
+			<integer value="5"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -118,29 +118,37 @@
 			<object class="NSCustomObject" id="796877042">
 				<string key="NSClassName">NSApplication</string>
 			</object>
-			<object class="NSCustomView" id="572113413">
+			<object class="NSCustomView" id="833183581">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">265</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="NSButton" id="349474001">
-						<reference key="NSNextResponder" ref="572113413"/>
+					<object class="NSButton" id="527203351">
+						<reference key="NSNextResponder" ref="833183581"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{141, 8}, {33, 19}}</string>
-						<reference key="NSSuperview" ref="572113413"/>
+						<string key="NSFrame">{{124, 5.5}, {33, 33}}</string>
+						<reference key="NSSuperview" ref="833183581"/>
 						<bool key="NSEnabled">YES</bool>
-						<object class="NSButtonCell" key="NSCell" id="113240620">
-							<int key="NSCellFlags">-2080244224</int>
+						<object class="NSButtonCell" key="NSCell" id="1037445567">
+							<int key="NSCellFlags">67239424</int>
 							<int key="NSCellFlags2">134217728</int>
-							<string key="NSContents">pin</string>
+							<string key="NSContents"/>
 							<object class="NSFont" key="NSSupport">
 								<string key="NSName">LucidaGrande</string>
-								<double key="NSSize">12</double>
-								<int key="NSfFlags">16</int>
+								<double key="NSSize">13</double>
+								<int key="NSfFlags">1044</int>
 							</object>
-							<reference key="NSControlView" ref="349474001"/>
-							<int key="NSButtonFlags">914637055</int>
-							<int key="NSButtonFlags2">164</int>
+							<reference key="NSControlView" ref="527203351"/>
+							<int key="NSButtonFlags">-934526721</int>
+							<int key="NSButtonFlags2">130</int>
+							<object class="NSCustomResource" key="NSNormalImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">unpinned</string>
+							</object>
+							<object class="NSCustomResource" key="NSAlternateImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">pinned</string>
+							</object>
 							<string key="NSAlternateContents"/>
 							<string key="NSKeyEquivalent">t</string>
 							<int key="NSPeriodicDelay">400</int>
@@ -148,7 +156,7 @@
 						</object>
 					</object>
 				</object>
-				<string key="NSFrameSize">{178, 29}</string>
+				<string key="NSFrameSize">{158, 33}</string>
 				<reference key="NSSuperview"/>
 				<string key="NSClassName">NSView</string>
 			</object>
@@ -192,17 +200,17 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">pinView</string>
 						<reference key="source" ref="512844837"/>
-						<reference key="destination" ref="572113413"/>
+						<reference key="destination" ref="833183581"/>
 					</object>
 					<int key="connectionID">100057</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: self.document.isPinned</string>
-						<reference key="source" ref="349474001"/>
+						<reference key="source" ref="527203351"/>
 						<reference key="destination" ref="512844837"/>
 						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="349474001"/>
+							<reference key="NSSource" ref="527203351"/>
 							<reference key="NSDestination" ref="512844837"/>
 							<string key="NSLabel">value: self.document.isPinned</string>
 							<string key="NSBinding">value</string>
@@ -210,7 +218,7 @@
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">100061</int>
+					<int key="connectionID">100065</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -268,27 +276,27 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100054</int>
-						<reference key="object" ref="572113413"/>
+						<reference key="object" ref="833183581"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="349474001"/>
+							<reference ref="527203351"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Title bar accessory</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100058</int>
-						<reference key="object" ref="349474001"/>
+						<reference key="object" ref="527203351"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="113240620"/>
+							<reference ref="1037445567"/>
 						</object>
-						<reference key="parent" ref="572113413"/>
+						<reference key="parent" ref="833183581"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100059</int>
-						<reference key="object" ref="113240620"/>
-						<reference key="parent" ref="349474001"/>
+						<reference key="object" ref="1037445567"/>
+						<reference key="parent" ref="527203351"/>
 					</object>
 				</object>
 			</object>
@@ -329,21 +337,21 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBAccessibilityAttribute">
 								<string key="name">AccessibilityDescription</string>
-								<reference key="object" ref="572113413"/>
+								<reference key="object" ref="833183581"/>
 								<string key="accessibilityValue">Keep window on top</string>
 							</object>
 							<object class="IBToolTipAttribute">
 								<string key="name">ToolTip</string>
-								<reference key="object" ref="572113413"/>
+								<reference key="object" ref="833183581"/>
 								<string key="toolTip">Keep window on top</string>
 							</object>
 						</object>
 					</object>
-					<string>{{461, 724}, {178, 29}}</string>
+					<string>{{712, 714}, {158, 33}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABC+gAAwdgAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABC1gAAwggAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{410, 156}, {600, 723}}</string>
@@ -373,7 +381,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100061</int>
+			<int key="maxID">100065</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -507,7 +515,7 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">NSControl</string>
 					<string key="superclassName">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="653886744">
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="242531165">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">AppKit.framework/Headers/NSControl.h</string>
 					</object>
@@ -549,7 +557,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>
-					<reference key="sourceIdentifier" ref="653886744"/>
+					<reference key="sourceIdentifier" ref="242531165"/>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>
@@ -1042,5 +1050,18 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<string key="IBDocument.LastKnownRelativeProjectPath">../lumberjack.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<bool key="EncodedWithXMLCoder">YES</bool>
+			<object class="NSArray" key="dict.sortedKeys">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>pinned</string>
+				<string>unpinned</string>
+			</object>
+			<object class="NSMutableArray" key="dict.values">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>{25, 25}</string>
+				<string>{25, 25}</string>
+			</object>
+		</object>
 	</data>
 </archive>

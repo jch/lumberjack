@@ -82,8 +82,8 @@ Lumberjack.prependEntry = function(destination) {
                   '     <p class="controller_action"></p>' +
                   '     <div class="subdetails">' +
                   '       <p class="timestamp"></p>' +
-                  '       (<p class="method"></p>' +
-                  '       <p class="host"></p>)' +
+                  '       <p class="method"></p>' +
+                  '       <p class="host"></p>' +
                   '     </div>' +
                   '   </div>' +
                   '   <div class="body"></div>' +
