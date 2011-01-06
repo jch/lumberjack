@@ -24,7 +24,7 @@
   self = [super init];
   if (self) {
     self.isChecking = NO;
-    self.isPinned = YES; // TODO: should come from preferences
+    self.isPinned = [[NSUserDefaults standardUserDefaults] boolForKey: @"defaultIsPinned"];
     self.readBuffer = [NSMutableString string];
     
     [self setHasUndoManager:NO];

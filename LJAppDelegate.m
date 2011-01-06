@@ -15,6 +15,10 @@
 {
   if (self = [super init]) {
     applicationHasStarted = NO;
+    [[NSUserDefaults standardUserDefaults] registerDefaults:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [NSNumber numberWithBool:NO], @"defaultIsPinned",
+      [NSNumber numberWithInt:0], @"defaultStartupLoad", nil]];
   }
   return self;
 }
@@ -26,8 +30,8 @@
 
 - (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender
 {
-  if (!applicationHasStarted) {
-    NSLog(@"app not started!!!");
+  int startupLoad = [[NSUserDefaults standardUserDefaults] integerForKey:@"defaultStartupLoad"];
+  if (!applicationHasStarted && startupLoad == 0) {
     NSDocumentController *dc = [NSDocumentController sharedDocumentController];
     NSArray *urls = [dc recentDocumentURLs];
 
@@ -37,6 +41,8 @@
       [dc openDocumentWithContentsOfURL:mostRecentURL display:YES error:NULL];
       return NO;
     }
+  } else if (startupLoad == 2) {
+    return NO;
   }
   return YES;
 }

@@ -19,6 +19,9 @@
 		55321D0712D54C2B008B962B /* pinned.png in Resources */ = {isa = PBXBuildFile; fileRef = 55321D0612D54C2B008B962B /* pinned.png */; };
 		55321D1512D54E49008B962B /* unpinned.png in Resources */ = {isa = PBXBuildFile; fileRef = 55321D1412D54E49008B962B /* unpinned.png */; };
 		55321D2812D57FD6008B962B /* axe_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55321D2712D57FD6008B962B /* axe_icon.icns */; };
+		55321D3A12D58BE8008B962B /* axe-splash-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 55321D3912D58BE8008B962B /* axe-splash-bg.png */; };
+		55321D4212D5C070008B962B /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55321D4112D5C070008B962B /* Preferences.xib */; };
+		55321D4612D5C0B8008B962B /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55321D4512D5C0B8008B962B /* PreferencesController.m */; };
 		556C482F12B987A3003F713E /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 556C477712B987A3003F713E /* jquery.js */; };
 		556C483012B987A3003F713E /* reset-min.css in Resources */ = {isa = PBXBuildFile; fileRef = 556C477812B987A3003F713E /* reset-min.css */; };
 		556C483112B987A3003F713E /* splash.html in Resources */ = {isa = PBXBuildFile; fileRef = 556C477912B987A3003F713E /* splash.html */; };
@@ -58,6 +61,10 @@
 		55321D0612D54C2B008B962B /* pinned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinned.png; sourceTree = "<group>"; };
 		55321D1412D54E49008B962B /* unpinned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unpinned.png; sourceTree = "<group>"; };
 		55321D2712D57FD6008B962B /* axe_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = axe_icon.icns; sourceTree = "<group>"; };
+		55321D3912D58BE8008B962B /* axe-splash-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "axe-splash-bg.png"; path = "rb/axe-splash-bg.png"; sourceTree = "<group>"; };
+		55321D4112D5C070008B962B /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		55321D4412D5C0B8008B962B /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		55321D4512D5C0B8008B962B /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		556C46F512B97EB9003F713E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = rb/index.html; sourceTree = "<group>"; };
 		556C477712B987A3003F713E /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.js; path = rb/jquery.js; sourceTree = "<group>"; };
 		556C477812B987A3003F713E /* reset-min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "reset-min.css"; path = "rb/reset-min.css"; sourceTree = "<group>"; };
@@ -256,6 +263,8 @@
 				5532197612CC25CB008B962B /* LJDocumentController.m */,
 				553219F912CD06E2008B962B /* LJAppDelegate.h */,
 				553219FA12CD06E2008B962B /* LJAppDelegate.m */,
+				55321D4412D5C0B8008B962B /* PreferencesController.h */,
+				55321D4512D5C0B8008B962B /* PreferencesController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -272,6 +281,7 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				55321D3912D58BE8008B962B /* axe-splash-bg.png */,
 				55321D2712D57FD6008B962B /* axe_icon.icns */,
 				55321D1412D54E49008B962B /* unpinned.png */,
 				55321D0612D54C2B008B962B /* pinned.png */,
@@ -289,6 +299,7 @@
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
 				1DDD58280DA1D0D100B32029 /* Log.xib */,
 				1DDD582A0DA1D0D100B32029 /* MainMenu.xib */,
+				55321D4112D5C070008B962B /* Preferences.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -675,6 +686,8 @@
 				55321D0712D54C2B008B962B /* pinned.png in Resources */,
 				55321D1512D54E49008B962B /* unpinned.png in Resources */,
 				55321D2812D57FD6008B962B /* axe_icon.icns in Resources */,
+				55321D3A12D58BE8008B962B /* axe-splash-bg.png in Resources */,
+				55321D4212D5C070008B962B /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +704,7 @@
 				5532197712CC25CB008B962B /* LJDocumentController.m in Sources */,
 				553219FB12CD06E2008B962B /* LJAppDelegate.m in Sources */,
 				55321C6412D52063008B962B /* AVWindow.m in Sources */,
+				55321D4612D5C0B8008B962B /* PreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
