@@ -15,6 +15,7 @@
 {
   NSFileHandle *file;
   BOOL isChecking;
+  BOOL isPinned;
   NSString *readBuffer; // should be char*
   NSTimer *timer; // periodically checks for log changes
 }
