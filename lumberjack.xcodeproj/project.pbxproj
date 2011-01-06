@@ -624,9 +624,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D15AC270486D014006FF6A4 /* lumberjack */ = {
+		8D15AC270486D014006FF6A4 /* Lumberjack */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "lumberjack" */;
+			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "Lumberjack" */;
 			buildPhases = (
 				8D15AC2B0486D014006FF6A4 /* Resources */,
 				8D15AC300486D014006FF6A4 /* Sources */,
@@ -636,7 +636,7 @@
 			);
 			dependencies = (
 			);
-			name = lumberjack;
+			name = Lumberjack;
 			productInstallPath = "$(HOME)/Applications";
 			productName = lumberjack;
 			productReference = 8D15AC370486D014006FF6A4 /* lumberjack.app */;
@@ -661,7 +661,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D15AC270486D014006FF6A4 /* lumberjack */,
+				8D15AC270486D014006FF6A4 /* Lumberjack */,
 			);
 		};
 /* End PBXProject section */
@@ -806,7 +806,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "lumberjack" */ = {
+		C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "Lumberjack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C05733C808A9546B00998B17 /* Debug */,
