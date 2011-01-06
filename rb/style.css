@@ -1,7 +1,7 @@
 .clear { clear: both;}
 
 ::selection {
-  background: #ffb7b7; /* Safari */
+  // background: #ffb7b7; /* Safari */
 }
 
 a {
