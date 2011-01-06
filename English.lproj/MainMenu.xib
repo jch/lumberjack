@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="57"/>
+			<integer value="29"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -39,7 +39,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="NSMenuItem" id="694149608">
 						<reference key="NSMenu" ref="649796088"/>
-						<string key="NSTitle">lumberjack</string>
+						<string key="NSTitle">Lumberjack</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -53,7 +53,7 @@
 						</object>
 						<string key="NSAction">submenuAction:</string>
 						<object class="NSMenu" key="NSSubmenu" id="110575045">
-							<string key="NSTitle">lumberjack</string>
+							<string key="NSTitle">Lumberjack</string>
 							<object class="NSMutableArray" key="NSMenuItems">
 								<bool key="EncodedWithXMLCoder">YES</bool>
 								<object class="NSMenuItem" id="238522557">
@@ -1223,7 +1223,7 @@
 									<reference key="NSOnImage" ref="1033313550"/>
 									<reference key="NSMixedImage" ref="310636482"/>
 								</object>
-								<object class="NSMenuItem" id="631345545">
+								<object class="NSMenuItem" id="852745408">
 									<reference key="NSMenu" ref="466310130"/>
 									<bool key="NSIsDisabled">YES</bool>
 									<bool key="NSIsSeparator">YES</bool>
@@ -1233,7 +1233,7 @@
 									<reference key="NSOnImage" ref="1033313550"/>
 									<reference key="NSMixedImage" ref="310636482"/>
 								</object>
-								<object class="NSMenuItem" id="694812763">
+								<object class="NSMenuItem" id="591004707">
 									<reference key="NSMenu" ref="466310130"/>
 									<string key="NSTitle">Stay on top</string>
 									<string key="NSKeyEquiv">t</string>
@@ -1337,10 +1337,10 @@
 			<object class="NSCustomObject" id="405878354">
 				<string key="NSClassName">LJAppDelegate</string>
 			</object>
-			<object class="NSUserDefaultsController" id="777493589">
+			<object class="NSUserDefaultsController" id="718321678">
 				<bool key="NSSharedInstance">YES</bool>
 			</object>
-			<object class="NSCustomObject" id="487860538">
+			<object class="NSCustomObject" id="1072571095">
 				<string key="NSClassName">PreferencesController</string>
 			</object>
 		</object>
@@ -2022,7 +2022,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">showWindow:</string>
-						<reference key="source" ref="487860538"/>
+						<reference key="source" ref="1072571095"/>
 						<reference key="destination" ref="609285721"/>
 					</object>
 					<int key="connectionID">543</int>
@@ -2484,8 +2484,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="102151532"/>
 							<reference ref="237841660"/>
-							<reference ref="694812763"/>
-							<reference ref="631345545"/>
+							<reference ref="591004707"/>
+							<reference ref="852745408"/>
 						</object>
 						<reference key="parent" ref="586577488"/>
 					</object>
@@ -3065,22 +3065,22 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">533</int>
-						<reference key="object" ref="694812763"/>
+						<reference key="object" ref="591004707"/>
 						<reference key="parent" ref="466310130"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">534</int>
-						<reference key="object" ref="631345545"/>
+						<reference key="object" ref="852745408"/>
 						<reference key="parent" ref="466310130"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">538</int>
-						<reference key="object" ref="777493589"/>
+						<reference key="object" ref="718321678"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">542</int>
-						<reference key="object" ref="487860538"/>
+						<reference key="object" ref="1072571095"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</object>
@@ -3445,7 +3445,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>{{525, 802}, {197, 73}}</string>
-					<string>{{418, 506}, {445, 20}}</string>
+					<string>{{418, 506}, {448, 20}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>{74, 862}</string>
