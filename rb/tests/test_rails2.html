@@ -50,12 +50,8 @@
 
       test("Processing lines should start add a new entry and add the line", function() {
         setup();
-        count = Lumberjack.entries().length;
         Lumberjack.process(l1);
-        equal(Lumberjack.entries().length, count, "should not add an entry if last one is blank");
-        Lumberjack.process(l1);
-        equal(Lumberjack.entries().length, count+1, "should add an entry");
-        
+        equal(Lumberjack.entries().length, 1, "should add an entry");
         e = Lumberjack.currentEntry();
         equal(e.find('.controller_action').text(), "ApplicationController#index");
         equal(e.find('.host').text(), "127.0.0.1");
