@@ -22,9 +22,28 @@ Lumberjack = {
 //
 // See lumberjack_test.js for examples
 Lumberjack.rules = [
-  [/./, function(line, matches) {
-    console.log("No rules specified. See lumberjack.js 'rules' for details. test: " + line);
+// cleanup sql color marks
+  [/./, function(line, matches){
+    var s = decodeURI(line);
+    s = s.replace(/%23/, "#"); // decodeURI didn't get
+    return [s, true];
+  }],
+
+  [/^Started /, function(line, matches) {
+    Lumberjack.setType('rails3');
+    Lumberjack.process(line); // reprocess the line
+    return ["", false];
+  }],
+
+  [/^Processing /, function(line, matches) {
+    Lumberjack.setType('rails2');
+    Lumberjack.process(line); // reprocess the line
+    return ["", false];
   }]
+
+  // [/./, function(line, matches) {
+  //   console.log("No rules specified. See lumberjack.js 'rules' for details. test: " + line);
+  // }]
 ]
 
 Lumberjack.setup = function(config) {
@@ -32,6 +51,10 @@ Lumberjack.setup = function(config) {
     this.config[k] = config[k];
   }
   return this.config;
+}
+
+Lumberjack.setType = function(logType) {
+  Lumberjack.rules = Lumberjack[logType].rules;
 }
 
 Lumberjack.entries = function() {
@@ -90,9 +113,9 @@ Lumberjack.prependEntry = function(destination) {
                   '  </div>' +
                   '</div>';
   var entryElement = $(entryHtml);
-  $(destination || this.config['prependTo']).prepend(entryElement);
+  $(destination || this.config['prependTo']).append(entryElement);
   $('.entry').removeClass('selected');
-  $('.entry:first').addClass('selected');
+  $('.entry:last').addClass('selected');
 };
 
 // After cleaning up a line

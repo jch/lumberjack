@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "Constants.h"
 
 @interface PreferencesController : NSWindowController {
 

@@ -15,6 +15,7 @@
 -(id) init
 {
   self = [super initWithWindowNibName:@"Log"];
+  canPin = YES;
   NSLog(@"LC: init %@", [self document]);
   return self;
 }
@@ -35,12 +36,43 @@
 
   // register for linesAvailable notifications and kick off the check loop:
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(linesAvailable:) name:kLinesAvailable object:[self document]];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(togglePin:) name:kTogglePin object:nil];
 }
 
 - (void) composeInterface
 {
   [(AVWindow*)[self window] setTitlebarAccessoryView:pinView];
 }
+
+//- (void)keyDown:(NSEvent *)theEvent
+//{
+////  NSAlphaShiftKeyMask = 1 << 16,
+////  NSShiftKeyMask      = 1 << 17,
+////  NSControlKeyMask    = 1 << 18,
+////  NSAlternateKeyMask  = 1 << 19,
+////  NSCommandKeyMask    = 1 << 20,
+////  NSNumericPadKeyMask = 1 << 21,
+////  NSHelpKeyMask       = 1 << 22,
+////  NSFunctionKeyMask   = 1 << 23,
+////  NSDeviceIndependentModifierFlagsMask = 0xffff0000U
+//  // n - 35
+//  // p - 45
+//  // j - 38
+//  // k - 40
+//  NSLog(@"key down: %u %u", [theEvent keyCode], [theEvent modifierFlags]);
+//  if ([theEvent keyCode] == 38) {
+//    // down: j or cntrl-n
+//    [self nextLogEntry];
+//  } else if (<#condition#>) {
+//    <#statements#>
+//  } else {
+//    [super keyDown:theEvent];
+//  }
+//}
+
+
+#pragma mark -
+#pragma mark Notification Handlers
 
 - (void) linesAvailable:(NSNotification*)aNotification
 {
@@ -52,6 +84,13 @@
     // NSLog(@"JSSSSS: %@", js);
     // NSLog(@"js returned: %@", );
   }
+  [[logView windowScriptObject] evaluateWebScript:@"$.scrollTo('.entry:last', 500, {over:{bottom:0}});"];
+}
+
+- (void) togglePin:(NSNotification*)aNotification
+{
+  NSLog(@"toggling pin %@", aNotification);
+  canPin = [[[aNotification userInfo] valueForKey:kTogglePin] boolValue];
 }
 
 - (NSString *)windowTitleForDocumentDisplayName:(NSString *)displayName
@@ -66,7 +105,8 @@
 
 - (void)windowDidResignMain:(NSNotification *)notification
 {
-  if ([[self document] isPinned]) {
+  NSLog(@"resigning window: %@", notification);
+  if (canPin && [[self document] isPinned]) {
     [[self window] setLevel:NSFloatingWindowLevel];
   } else {
     [[self window] setLevel:NSNormalWindowLevel];

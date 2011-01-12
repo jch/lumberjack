@@ -18,6 +18,7 @@
   BOOL isPinned;
   NSString *readBuffer; // should be char*
   NSTimer *timer; // periodically checks for log changes
+  NSString *logType; // maybe should be an enum
 }
 
 @property (nonatomic) BOOL isChecking;

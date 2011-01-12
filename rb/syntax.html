@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>test</title>
+    <meta name="author" content="Jerry Cheung">
+    <!-- <link rel="stylesheet" href="stylesheets/reset-min.css" type="text/css" media="screen" title="no title" charset="utf-8"> -->
+    <script src="jquery.js"></script>
+    <link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    SyntaxHighlighter.autoloader(
+      'sql  /scripts/shBrushSql.js',
+      'ruby /scripts/shBrushRuby.js'
+    );
+
+    SyntaxHighlighter.all();
+    </script>
+  </head>
+  <body>
+    <pre name="code" class="sql">
+SELECT * FROM "reviews" WHERE ("reviews"."status" = E'published') ORDER BY reviews.created_at DESC LIMIT 6 OFFSET 0
+    </pre>
+    
+<pre name="code" class="ruby">
+def bar
+  if true
+    puts "hello"
+  end
+end
+</pre>
+
+  </body>
+</html>

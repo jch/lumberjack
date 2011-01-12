@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1DDD582C0DA1D0D100B32029 /* Log.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* Log.xib */; };
-		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		5532182212CABE44008B962B /* log.html in Resources */ = {isa = PBXBuildFile; fileRef = 5532181F12CABE44008B962B /* log.html */; };
 		5532182512CABE4C008B962B /* lumberjack.js in Resources */ = {isa = PBXBuildFile; fileRef = 5532182012CABE44008B962B /* lumberjack.js */; };
 		5532182612CABE4C008B962B /* rails2.js in Resources */ = {isa = PBXBuildFile; fileRef = 5532182112CABE44008B962B /* rails2.js */; };
 		5532197712CC25CB008B962B /* LJDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5532197612CC25CB008B962B /* LJDocumentController.m */; };
 		553219FB12CD06E2008B962B /* LJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 553219FA12CD06E2008B962B /* LJAppDelegate.m */; };
 		55321C6412D52063008B962B /* AVWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 55321C6212D52063008B962B /* AVWindow.m */; };
-		55321C6512D52063008B962B /* README in Resources */ = {isa = PBXBuildFile; fileRef = 55321C6312D52063008B962B /* README */; };
 		55321D0712D54C2B008B962B /* pinned.png in Resources */ = {isa = PBXBuildFile; fileRef = 55321D0612D54C2B008B962B /* pinned.png */; };
 		55321D1512D54E49008B962B /* unpinned.png in Resources */ = {isa = PBXBuildFile; fileRef = 55321D1412D54E49008B962B /* unpinned.png */; };
 		55321D2812D57FD6008B962B /* axe_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55321D2712D57FD6008B962B /* axe_icon.icns */; };
@@ -26,6 +24,10 @@
 		556C483012B987A3003F713E /* reset-min.css in Resources */ = {isa = PBXBuildFile; fileRef = 556C477812B987A3003F713E /* reset-min.css */; };
 		556C483112B987A3003F713E /* splash.html in Resources */ = {isa = PBXBuildFile; fileRef = 556C477912B987A3003F713E /* splash.html */; };
 		556C483212B987A3003F713E /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 556C477A12B987A3003F713E /* style.css */; };
+		556CCBAC12DE1617006DE45C /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 556CCBAB12DE1617006DE45C /* Sparkle.framework */; };
+		556CCBC112DE1834006DE45C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
+		556CCBE612DE1C91006DE45C /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 556CCBE512DE1C91006DE45C /* dsa_pub.pem */; };
+		556CCC1912DE25B2006DE45C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556CCBAB12DE1617006DE45C /* Sparkle.framework */; };
 		558A9A7C12B2E4F200F2B380 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558A9A7B12B2E4F200F2B380 /* WebKit.framework */; };
 		558A9ABF12B2ED2800F2B380 /* LogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558A9ABE12B2ED2800F2B380 /* LogController.m */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -34,6 +36,19 @@
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		556CCBD912DE189B006DE45C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				556CCBAC12DE1617006DE45C /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -192,6 +207,9 @@
 		556C482C12B987A3003F713E /* web_socket.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = web_socket.js; sourceTree = "<group>"; };
 		556C482D12B987A3003F713E /* WebSocketMain.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WebSocketMain.swf; sourceTree = "<group>"; };
 		556C482E12B987A3003F713E /* WebSocketMainInsecure.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = WebSocketMainInsecure.zip; sourceTree = "<group>"; };
+		556CCB1312D68653006DE45C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		556CCBAB12DE1617006DE45C /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		556CCBE512DE1C91006DE45C /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		558A9A7B12B2E4F200F2B380 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		558A9ABD12B2ED2800F2B380 /* LogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogController.h; sourceTree = "<group>"; };
 		558A9ABE12B2ED2800F2B380 /* LogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogController.m; sourceTree = "<group>"; };
@@ -204,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556CCC1912DE25B2006DE45C /* Sparkle.framework in Frameworks */,
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
 				558A9A7C12B2E4F200F2B380 /* WebKit.framework in Frameworks */,
 			);
@@ -215,6 +234,7 @@
 		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				556CCBAB12DE1617006DE45C /* Sparkle.framework */,
 				558A9A7B12B2E4F200F2B380 /* WebKit.framework */,
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
 			);
@@ -265,6 +285,7 @@
 				553219FA12CD06E2008B962B /* LJAppDelegate.m */,
 				55321D4412D5C0B8008B962B /* PreferencesController.h */,
 				55321D4512D5C0B8008B962B /* PreferencesController.m */,
+				556CCB1312D68653006DE45C /* Constants.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -281,6 +302,7 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				556CCBE512DE1C91006DE45C /* dsa_pub.pem */,
 				55321D3912D58BE8008B962B /* axe-splash-bg.png */,
 				55321D2712D57FD6008B962B /* axe_icon.icns */,
 				55321D1412D54E49008B962B /* unpinned.png */,
@@ -628,6 +650,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "Lumberjack" */;
 			buildPhases = (
+				556CCBD912DE189B006DE45C /* CopyFiles */,
 				8D15AC2B0486D014006FF6A4 /* Resources */,
 				8D15AC300486D014006FF6A4 /* Sources */,
 				8D15AC330486D014006FF6A4 /* Frameworks */,
@@ -671,6 +694,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556CCBC112DE1834006DE45C /* MainMenu.xib in Resources */,
 				5532182212CABE44008B962B /* log.html in Resources */,
 				5532182512CABE4C008B962B /* lumberjack.js in Resources */,
 				5532182612CABE4C008B962B /* rails2.js in Resources */,
@@ -678,16 +702,15 @@
 				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
 				1DDD582C0DA1D0D100B32029 /* Log.xib in Resources */,
-				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
 				556C483012B987A3003F713E /* reset-min.css in Resources */,
 				556C483112B987A3003F713E /* splash.html in Resources */,
 				556C483212B987A3003F713E /* style.css in Resources */,
-				55321C6512D52063008B962B /* README in Resources */,
 				55321D0712D54C2B008B962B /* pinned.png in Resources */,
 				55321D1512D54E49008B962B /* unpinned.png in Resources */,
 				55321D2812D57FD6008B962B /* axe_icon.icns in Resources */,
 				55321D3A12D58BE8008B962B /* axe-splash-bg.png in Resources */,
 				55321D4212D5C070008B962B /* Preferences.xib in Resources */,
+				556CCBE612DE1C91006DE45C /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,6 +774,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -768,6 +795,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = lumberjack_Prefix.pch;

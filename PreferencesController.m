@@ -8,7 +8,6 @@
 
 #import "PreferencesController.h"
 
-
 @implementation PreferencesController
 
 -(id) init {
@@ -16,6 +15,24 @@
     
   }
   return self;
+}
+
+-(void) showWindow:(id)sender {
+  [[NSNotificationCenter defaultCenter]
+   postNotificationName:kTogglePin
+   object:self
+   userInfo:[NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:kTogglePin]];
+  [super showWindow:sender];
+}
+
+#pragma mark -
+#pragma mark Window Delegate
+
+- (void)windowWillClose:(NSNotification *)notification {
+  [[NSNotificationCenter defaultCenter]
+   postNotificationName:kTogglePin
+   object:self
+   userInfo:[NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:kTogglePin]];  
 }
 
 @end

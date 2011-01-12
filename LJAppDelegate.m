@@ -18,14 +18,25 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:
      [NSDictionary dictionaryWithObjectsAndKeys:
       [NSNumber numberWithBool:NO], @"defaultIsPinned",
-      [NSNumber numberWithInt:0], @"defaultStartupLoad", nil]];
+      [NSNumber numberWithInt:1], @"defaultStartupLoad", nil]];
   }
+
+  // Forced expiration - should read from Info.plist
+  if ([self isExpired]) {
+    NSRunAlertPanel(@"App Expired",@"Visit website http://whatcodecraves.com/lumberjack",@"OK",nil,nil);
+    [NSApp terminate:self];
+    return nil;
+  }
+
   return self;
 }
 
 - (void)applicationDidFinishLaunching
 {
   applicationHasStarted = YES;
+  
+  // Sparkle updates
+  [checkForUpdatesMenuItem setTarget:[SUUpdater sharedUpdater]];
 }
 
 - (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender
@@ -45,6 +56,14 @@
     return NO;
   }
   return YES;
+}
+
+- (BOOL)isExpired
+{
+  NSDate *expiryDate = [NSDate dateWithNaturalLanguageString:@"2/6/2011"];
+  NSDate *now = [NSDate date];
+  
+  return [now compare:expiryDate] == NSOrderedDescending;
 }
 
 @end
