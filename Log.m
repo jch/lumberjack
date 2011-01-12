@@ -83,7 +83,7 @@
   NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
   // TODO: buffer partial lines
-  NSArray *lines = [s componentsSeparatedByString:@"\n"];
+  NSArray *lines = [s componentsSeparatedByString:@"\n\n"];
   NSDictionary *retval = [NSDictionary dictionaryWithObjectsAndKeys:lines, @"lines", nil];
 
   [[NSNotificationCenter defaultCenter] postNotificationName:kLinesAvailable object:self userInfo:retval];

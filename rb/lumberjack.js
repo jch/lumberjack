@@ -71,7 +71,8 @@ Lumberjack.currentEntry = function() {
 }
 
 Lumberjack.currentEntryEmpty = function() {
-  return this.currentEntry().find('.controller_action').text() != "" ||
+  // rails 3 controller_action isn't filled in immediately
+  return this.currentEntry().find('.method').text() != "" ||
          this.currentEntry().find('.body').children().length > 0;
 }
 
@@ -81,7 +82,7 @@ Lumberjack.process = function(line) {
     var re = this.rules[i][0];
     var callback = this.rules[i][1];
     var matches = undefined;
-    if(this.debug) {
+    if(this.config.debug) {
       console.log("processing " + re + " : '" + line + "'");
     }
     if(matches = line.match(re)) {
@@ -99,6 +100,7 @@ Lumberjack.process = function(line) {
 
 // destination - selector or jquery object of where to prepend new entry
 Lumberjack.prependEntry = function(destination) {
+  console.log("prependEntry");
   var entryHtml = '<div class="entry selected box">' +
                   '  <div class="content">' +
                   '   <div class="header">' +

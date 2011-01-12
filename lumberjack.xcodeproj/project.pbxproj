@@ -28,6 +28,8 @@
 		556CCBC112DE1834006DE45C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		556CCBE612DE1C91006DE45C /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 556CCBE512DE1C91006DE45C /* dsa_pub.pem */; };
 		556CCC1912DE25B2006DE45C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556CCBAB12DE1617006DE45C /* Sparkle.framework */; };
+		556CCC9112DE5D96006DE45C /* rails3.js in Sources */ = {isa = PBXBuildFile; fileRef = 556CCC9012DE5D96006DE45C /* rails3.js */; };
+		556CCC9212DE5DB1006DE45C /* rails3.js in Resources */ = {isa = PBXBuildFile; fileRef = 556CCC9012DE5D96006DE45C /* rails3.js */; };
 		558A9A7C12B2E4F200F2B380 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558A9A7B12B2E4F200F2B380 /* WebKit.framework */; };
 		558A9ABF12B2ED2800F2B380 /* LogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558A9ABE12B2ED2800F2B380 /* LogController.m */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -210,6 +212,7 @@
 		556CCB1312D68653006DE45C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		556CCBAB12DE1617006DE45C /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		556CCBE512DE1C91006DE45C /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		556CCC9012DE5D96006DE45C /* rails3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = rails3.js; path = rb/rails3.js; sourceTree = "<group>"; };
 		558A9A7B12B2E4F200F2B380 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		558A9ABD12B2ED2800F2B380 /* LogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogController.h; sourceTree = "<group>"; };
 		558A9ABE12B2ED2800F2B380 /* LogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogController.m; sourceTree = "<group>"; };
@@ -302,6 +305,7 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				556CCC9012DE5D96006DE45C /* rails3.js */,
 				556CCBE512DE1C91006DE45C /* dsa_pub.pem */,
 				55321D3912D58BE8008B962B /* axe-splash-bg.png */,
 				55321D2712D57FD6008B962B /* axe_icon.icns */,
@@ -694,6 +698,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556CCC9212DE5DB1006DE45C /* rails3.js in Resources */,
 				556CCBC112DE1834006DE45C /* MainMenu.xib in Resources */,
 				5532182212CABE44008B962B /* log.html in Resources */,
 				5532182512CABE4C008B962B /* lumberjack.js in Resources */,
@@ -728,6 +733,7 @@
 				553219FB12CD06E2008B962B /* LJAppDelegate.m in Sources */,
 				55321C6412D52063008B962B /* AVWindow.m in Sources */,
 				55321D4612D5C0B8008B962B /* PreferencesController.m in Sources */,
+				556CCC9112DE5D96006DE45C /* rails3.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

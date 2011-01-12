@@ -77,12 +77,14 @@
 - (void) linesAvailable:(NSNotification*)aNotification
 {
   NSArray *lines = [[aNotification userInfo] objectForKey:@"lines"];
-  for(NSString* line in lines) {
-    line = [line stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *js = [NSString stringWithFormat:@"Lumberjack.process(\"%@\")", line];
-    [[logView windowScriptObject] evaluateWebScript:js];
-    // NSLog(@"JSSSSS: %@", js);
-    // NSLog(@"js returned: %@", );
+  for(NSString* e in lines) {
+    [[logView windowScriptObject] evaluateWebScript:@"if(Lumberjack.currentEntryEmpty()) { Lumberjack.prependEntry() }"];
+    for(NSString *line in [e componentsSeparatedByString:@"\n"]) {    
+      line = [line stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+      NSString *js = [NSString stringWithFormat:@"Lumberjack.process(\"%@\")", line];
+      [[logView windowScriptObject] evaluateWebScript:js];
+      // NSLog(@"js returned: %@", );
+    }
   }
   [[logView windowScriptObject] evaluateWebScript:@"$.scrollTo('.entry:last', 500, {over:{bottom:0}});"];
 }

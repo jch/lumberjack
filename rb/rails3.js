@@ -1,9 +1,10 @@
-// processing rules for rails2
-Lumberjack.rails2 = {
+// processing rules for rails3
+Lumberjack.rails3 = {
   rules: [
     // cleanup sql color marks
     [/./, function(line, matches){
       var s = decodeURI(line);
+      console.log("+++" + s + "+++");
       s = s.replace(/%23/, "#"); // decodeURI didn't get
       s = s.replace(/^\s+/, "");
       s = s.replace(/\s+$/, "\n");
@@ -17,16 +18,22 @@ Lumberjack.rails2 = {
     }],
 
     // start new entry
-    [/Processing (\w+#\w+)/, function(line, matches) {
-      var extras = line.match(/\(for (.*?) at (.*?)\) \[(.*?)\]/);
-      // create a new entry if the last one isn't blank
-      // if(Lumberjack.currentEntryEmpty()) {
-      //   Lumberjack.prependEntry();
-      // }
-      Lumberjack.appendLineToCurrentEntry('.controller_action', matches[1]);
+    [/Started ([A-Z]+) /, function(line, matches) {
+      var extras = line.match(/for (.*?) at (.*)/);
       Lumberjack.appendLineToCurrentEntry('.host', extras[1]);
       Lumberjack.appendLineToCurrentEntry('.timestamp', extras[2]);
-      Lumberjack.appendLineToCurrentEntry('.method', extras[3]);
+      Lumberjack.appendLineToCurrentEntry('.method', matches[1]);
+      return ["", false];
+    }],
+
+    [/Processing by (\w+#\w+) as (.*)/, function(line, matches) {
+      var extras = line.match(/\(for (.*?) at (.*?)\) \[(.*?)\]/);
+      if(Lumberjack.currentEntry().find('.controller_action').text() != "") {
+        // poorly formatted log, log it inline
+        return [line, true];
+      } else {
+        Lumberjack.appendLineToCurrentEntry('.controller_action', matches[1] + "<br/>");
+      }
       return ["", false];
     }],
 

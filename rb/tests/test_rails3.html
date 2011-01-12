@@ -19,7 +19,8 @@
 
       function setup() {
         Lumberjack.setup({
-          prependTo: '#qunit-fixture'
+          prependTo: '#qunit-fixture',
+          debug: true
         })
         Lumberjack.prependEntry();
       }
@@ -30,18 +31,21 @@
 
       test("'Started' lines should start add a new entry and add the line", function() {
         setup();
-        count = Lumberjack.entries().length;
         Lumberjack.process(l1);
-        equal(Lumberjack.entries().length, count, "should not add an entry if last one is blank");
-        Lumberjack.process(l1);
-        equal(Lumberjack.entries().length, count+1, "should add an entry");
-        
+        equal(Lumberjack.entries().length, 1, "should not add an entry if last one is blank");
         e = Lumberjack.currentEntry();
-        equal(e.find('.controller_action').text(), "ApplicationController#index");
         equal(e.find('.host').text(), "127.0.0.1");
-        equal(e.find('.timestamp').text(), "2010-01-21 03:21:21");
-        equal(e.find('.method').text(), "GET");
-        teardown();
+        equal(e.find('.timestamp').text(), "Fri Dec 31 18:54:35 -0800 2010");
+        equal(e.find('.method').text(), "POST");
+
+        Lumberjack.process(l1);
+        equal(Lumberjack.entries().length, 2, "should add an entry");
+        e = Lumberjack.currentEntry();
+        equal(e.find('.host').text(), "127.0.0.1");
+        equal(e.find('.timestamp').text(), "Fri Dec 31 18:54:35 -0800 2010");
+        equal(e.find('.method').text(), "POST");
+        // debugger;
+        // teardown();
       });
       
       // test("Error should have class .error", function() {
