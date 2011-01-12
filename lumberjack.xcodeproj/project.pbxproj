@@ -217,7 +217,7 @@
 		558A9ABD12B2ED2800F2B380 /* LogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogController.h; sourceTree = "<group>"; };
 		558A9ABE12B2ED2800F2B380 /* LogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogController.m; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* lumberjack-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "lumberjack-Info.plist"; sourceTree = "<group>"; };
-		8D15AC370486D014006FF6A4 /* lumberjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lumberjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D15AC370486D014006FF6A4 /* Lumberjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lumberjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,7 +257,7 @@
 		19C28FB0FE9D524F11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D15AC370486D014006FF6A4 /* lumberjack.app */,
+				8D15AC370486D014006FF6A4 /* Lumberjack.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -666,7 +666,7 @@
 			name = Lumberjack;
 			productInstallPath = "$(HOME)/Applications";
 			productName = lumberjack;
-			productReference = 8D15AC370486D014006FF6A4 /* lumberjack.app */;
+			productReference = 8D15AC370486D014006FF6A4 /* Lumberjack.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -792,7 +792,7 @@
 				GCC_PREFIX_HEADER = lumberjack_Prefix.pch;
 				INFOPLIST_FILE = "lumberjack-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = lumberjack;
+				PRODUCT_NAME = Lumberjack;
 			};
 			name = Debug;
 		};
@@ -810,7 +810,7 @@
 				GCC_PREFIX_HEADER = lumberjack_Prefix.pch;
 				INFOPLIST_FILE = "lumberjack-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = lumberjack;
+				PRODUCT_NAME = Lumberjack;
 			};
 			name = Release;
 		};

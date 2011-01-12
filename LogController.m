@@ -83,7 +83,6 @@
       line = [line stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
       NSString *js = [NSString stringWithFormat:@"Lumberjack.process(\"%@\")", line];
       [[logView windowScriptObject] evaluateWebScript:js];
-      // NSLog(@"js returned: %@", );
     }
   }
   [[logView windowScriptObject] evaluateWebScript:@"$.scrollTo('.entry:last', 500, {over:{bottom:0}});"];
