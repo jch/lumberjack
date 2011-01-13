@@ -61,10 +61,20 @@ Lumberjack.rails2 = {
   
     // params lines should have class params and remove controller and action
     [/.*?Param/, function(line, matches) {
-      line = line.replace(/,? ?"action"=&gt;".*?",? ?/, "");
-      line = line.replace(/,? ?"controller"=&gt;".*?",? ?/, "");
+      var reAction = /,? ?"action"=&gt;"(.*?)",? ?/;
+      var action = line.match(reAction)[1];
+      line = line.replace(reAction, "");
+
+      reController = /,? ?"controller"=&gt;"(.*?)",? ?/;
+      var controller = line.match(reController)[1];
+      line = line.replace(reController, "");
+
+      e = Lumberjack.currentEntry();
+      var text = e.find('.controller_action').text();
+      var href = Lumberjack.config.projectRoot + '/app/controllers/' + controller + "_controller.rb";
+      var link = $("<a>").attr('href', href).text(text);
+      e.find('.controller_action').html(link);
       var myLine = $(line).addClass('params').outerHTML();
-    
       return [myLine, true];
     }],
   

@@ -39,65 +39,6 @@
         equal(e.find('.method').text(), "POST");
         teardown();
       });
-      
-      // test("Error should have class .error", function() {
-      //   setup();
-      //   count = Lumberjack.entries().length;
-      //   Lumberjack.process(l3);
-      //   equal(Lumberjack.entries().length, count, "no new entry should've been added");
-      //   e = Lumberjack.currentEntry();
-      //   equal(e.find('.body > .error').length, 1, "should be an error line");
-      //   teardown();
-      // });
-      // 
-      // test("Ignore SQL noise", function() {
-      //   setup();
-      //   Lumberjack.process(l6);
-      //   Lumberjack.process(l7);
-      //   Lumberjack.process(l13);
-      //   Lumberjack.process(l14);
-      //   equal(Lumberjack.currentEntry().find('.body').html(), "");
-      //   teardown();
-      // });
-      // 
-      // test("Render messages should have class .render", function() {
-      //   setup();
-      //   Lumberjack.process(l4);
-      //   Lumberjack.process(l5);
-      //   e = Lumberjack.currentEntry();
-      //   equal(e.find('.body > .render').length, 2, "should be render lines");
-      //   teardown();
-      // });
-      // 
-      // test("Redirect messages should have class .redirect", function() {
-      //   setup();
-      //   Lumberjack.process(l10);
-      //   e = Lumberjack.currentEntry();
-      //   equal(e.find('.body > .redirect').length, 1, "should be redirect lines");
-      //   teardown();
-      // });
-      // 
-      // test("Params should have class .params", function() {
-      //   setup();
-      //   Lumberjack.process(l8);
-      //   e = Lumberjack.currentEntry();
-      //   equal(e.find('.body > .params').length, 1, "should be params lines");
-      //   teardown();
-      // });
-      // 
-      // test("Stacktrace lines should have class .stacktrace", function() {
-      //   setup();
-      //   Lumberjack.process(l16);
-      //   Lumberjack.process(l17);
-      //   Lumberjack.process(l18);
-      //   Lumberjack.process(l19);
-      //   Lumberjack.process(l20);
-      //   Lumberjack.process(l21);
-      //   e = Lumberjack.currentEntry();
-      //   equal(e.find('.body > .stacktrace').length, 6, "should be stacktrace lines");
-      //   teardown();
-      // });
-      
     });
   </script>
 </head>

@@ -25,7 +25,6 @@ Lumberjack.rules = [
 // cleanup sql color marks
   [/./, function(line, matches){
     var s = decodeURI(line);
-    s = s.replace(/%23/, "#"); // decodeURI didn't get
     return [s, true];
   }],
 
@@ -86,7 +85,7 @@ Lumberjack.process = function(line) {
       console.log("processing " + re + " : '" + line + "'");
     }
     if(matches = line.match(re)) {
-      result = callback(line, matches);
+      var result = callback(line, matches);
       line = result[0];  // any direct manipulations to line
       fallThrough = result[1];
       if(fallThrough) {
@@ -100,7 +99,7 @@ Lumberjack.process = function(line) {
 
 // destination - selector or jquery object of where to prepend new entry
 Lumberjack.prependEntry = function(destination) {
-  console.log("prependEntry");
+  //console.log("prependEntry");
   var entryHtml = '<div class="entry selected box">' +
                   '  <div class="content">' +
                   '   <div class="header">' +

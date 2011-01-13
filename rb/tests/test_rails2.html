@@ -21,6 +21,7 @@
       var l7  = "  SQL (0.1ms)   SET SQL_AUTO_IS_NULL=0";
       var l8  = '  Parameters: {"action"=>"new", "controller"=>"reviews"}';
       var l8a = '  Parameters: {"action"=>"index", "region_id"=>"1", "controller"=>"topics"}'
+      var l8b = '  Parameters: {"action"=>"new", "controller"=>"admin/reviews"}'; // nested route
       var l9  = '  User Load (7.1ms)   SELECT * FROM "users" WHERE ("users"."id" = E\'1\') LIMIT 1';
       var l9a = '  Review Load (2.9ms)	SELECT * FROM "reviews" WHERE ("reviews"."status" = E\'published\') ORDER BY reviews.created_at DESC LIMIT 6 OFFSET 0'
       var l9b = '  Region Load (1.1ms)	SELECT `regions`.* FROM `regions` INNER JOIN `slugs` ON `slugs`.sluggable_id = `regions`.id AND `slugs`.sluggable_type = \'Region\' WHERE (`slugs`.`scope` IS NULL AND `slugs`.`sequence` = \'1\' AND `slugs`.`name` = \'1\') ORDER BY regions.name asc LIMIT 1'
@@ -39,8 +40,10 @@
 
       function setup() {
         Lumberjack.setup({
-          prependTo: '#qunit-fixture'
+          prependTo: '#qunit-fixture',
+          projectRoot: "file:///Users/jch/projects/beerpad"
         })
+        Lumberjack.setType('rails2');
         Lumberjack.prependEntry();
       }
 
@@ -108,6 +111,11 @@
         e = Lumberjack.currentEntry();
         equal(e.find('.body > .params').length, 2, "should be params lines");
         equal(e.find('.body > .params:last').text(), 'Parameters: {"region_id"=>"1"}');
+        
+        Lumberjack.appendLineToCurrentEntry(".controller_action", "FOOBAR"); // to href
+        Lumberjack.process(l8b);
+        e = Lumberjack.currentEntry();
+        equal(e.find('.controller_action > a').attr('href'), "file:///Users/jch/projects/beerpad/app/controllers/admin/reviews_controller.rb");
         teardown();
       });
       
