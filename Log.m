@@ -43,7 +43,7 @@
   [super dealloc];
 }
 
-- (NSString*) projectRoot
+- (NSURL*) projectRootURL
 {
   return [[[self fileURL] URLByDeletingLastPathComponent] URLByDeletingLastPathComponent];
 }

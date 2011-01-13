@@ -125,7 +125,7 @@
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {
   NSLog(@"after resources loaded");
-  NSString *js = [NSString stringWithFormat:@"Lumberjack.setup({projectRoot: \"%@\"});", [[self document] projectRoot]];
+  NSString *js = [NSString stringWithFormat:@"Lumberjack.setup({projectRoot: \"%@\"});", [[self document] projectRootURL]];
   NSLog(@"set project root js: %@", js);
   [[logView windowScriptObject] evaluateWebScript:js];
   [[self document] startChecking]; // NSDocument doesn't know checkFile, but can't cast b/c then would need to import
