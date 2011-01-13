@@ -100,7 +100,7 @@ Lumberjack.process = function(line) {
 // destination - selector or jquery object of where to prepend new entry
 Lumberjack.prependEntry = function(destination) {
   //console.log("prependEntry");
-  var entryHtml = '<div class="entry selected box">' +
+  var entryHtml = '<div class="entry selected box" style="display:none">' +
                   '  <div class="content">' +
                   '   <div class="header">' +
                   '     <p class="controller_action"></p>' +
@@ -122,4 +122,5 @@ Lumberjack.prependEntry = function(destination) {
 // After cleaning up a line
 Lumberjack.appendLineToCurrentEntry = function(destination, line) {
   this.currentEntry().find(destination).append(line);
+  this.currentEntry().show();
 };
