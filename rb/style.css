@@ -25,6 +25,10 @@ div {
   padding-left: 1em;
 }
 
+.indent {
+  padding-left: 1em;
+}
+
 .box {
   margin: 0px 0px;
   margin-bottom: 1em;

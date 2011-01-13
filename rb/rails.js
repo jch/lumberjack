@@ -4,7 +4,7 @@ Lumberjack.rails = {
     // cleanup sql color marks
     var s = decodeURI(line);
     s = s.replace(/%23/, "#"); // decodeURI didn't get
-    //s = s.replace(/^\s+/, "");
+    //s = s.replace(/^\s+/, "&nbsp;&nbsp;&nbsp;&nbsp;");
     s = s.replace(/\s+$/, "\n");
     s = s.replace(/\[4;36;1m/, "");
     s = s.replace(/\[0m   \[0;1m/, "\t");
@@ -20,8 +20,11 @@ Lumberjack.rails = {
   }],
 
   wrapInParagraph: [/./, function(line, matches) {
-    var myLine = jQuery("<p>").append(line).outerHTML();
-    return [myLine, true];
+    var myLine = jQuery("<p>").append(line);
+    if(line.match(/^\s+/)) {
+      myLine.addClass('indent');
+    }
+    return [myLine.outerHTML(), true];
   }],
 
   exception: [/.*?Error/, function(line, matches) {
