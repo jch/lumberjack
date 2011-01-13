@@ -28,7 +28,6 @@
 		556CCBC112DE1834006DE45C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		556CCBE612DE1C91006DE45C /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 556CCBE512DE1C91006DE45C /* dsa_pub.pem */; };
 		556CCC1912DE25B2006DE45C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556CCBAB12DE1617006DE45C /* Sparkle.framework */; };
-		556CCC9112DE5D96006DE45C /* rails3.js in Sources */ = {isa = PBXBuildFile; fileRef = 556CCC9012DE5D96006DE45C /* rails3.js */; };
 		556CCC9212DE5DB1006DE45C /* rails3.js in Resources */ = {isa = PBXBuildFile; fileRef = 556CCC9012DE5D96006DE45C /* rails3.js */; };
 		558A9A7C12B2E4F200F2B380 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558A9A7B12B2E4F200F2B380 /* WebKit.framework */; };
 		558A9ABF12B2ED2800F2B380 /* LogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558A9ABE12B2ED2800F2B380 /* LogController.m */; };
@@ -733,7 +732,6 @@
 				553219FB12CD06E2008B962B /* LJAppDelegate.m in Sources */,
 				55321C6412D52063008B962B /* AVWindow.m in Sources */,
 				55321D4612D5C0B8008B962B /* PreferencesController.m in Sources */,
-				556CCC9112DE5D96006DE45C /* rails3.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

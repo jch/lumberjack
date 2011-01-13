@@ -7,6 +7,7 @@
 //
 
 #import "LogController.h"
+#import "Log.h"
 
 @implementation LogController
 
