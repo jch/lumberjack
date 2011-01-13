@@ -5,10 +5,12 @@ Lumberjack.rails3 = {
 
     // start new entry
     [/Started ([A-Z]+) /, function(line, matches) {
-      var extras = line.match(/for (.*?) at (.*)/);
-      Lumberjack.appendLineToCurrentEntry('.host', extras[1]);
-      Lumberjack.appendLineToCurrentEntry('.timestamp', extras[2]);
+      var extras = line.match(/ "(.*)\/.*?" for (.*?) at (.*)/);
+      Lumberjack.appendLineToCurrentEntry('.host', extras[2]);
+      Lumberjack.appendLineToCurrentEntry('.timestamp', extras[3]);
       Lumberjack.appendLineToCurrentEntry('.method', matches[1]);
+      var link = $('<a>').attr('href', Lumberjack.config.projectRoot + 'app/controllers' + extras[1] + '_controller.rb');
+      Lumberjack.appendLineToCurrentEntry('.controller_action', link);
       return ["", false];
     }],
 
@@ -18,7 +20,7 @@ Lumberjack.rails3 = {
         // poorly formatted log, log it inline
         return [line, true];
       } else {
-        Lumberjack.appendLineToCurrentEntry('.controller_action', matches[1] + "<br/>");
+        Lumberjack.appendLineToCurrentEntry('.controller_action a', matches[1] + "<br/>");
       }
       return ["", false];
     }],

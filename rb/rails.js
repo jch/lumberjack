@@ -44,18 +44,9 @@ Lumberjack.rails = {
 
   params: [/.*?Param/, function(line, matches) {
     var reAction = /,? ?"action"=&gt;"(.*?)",? ?/;
-    var action = line.match(reAction)[1];
+    var reController = /,? ?"controller"=&gt;"(.*?)",? ?/;
     line = line.replace(reAction, "");
-
-    reController = /,? ?"controller"=&gt;"(.*?)",? ?/;
-    var controller = line.match(reController)[1];
     line = line.replace(reController, "");
-
-    e = Lumberjack.currentEntry();
-    var text = e.find('.controller_action').text();
-    var href = Lumberjack.config.projectRoot + 'app/controllers/' + controller + "_controller.rb";
-    var link = $("<a>").attr('href', href).text(text);
-    e.find('.controller_action').html(link);
     var myLine = $(line).addClass('params').outerHTML();
     return [myLine, true];
   }],

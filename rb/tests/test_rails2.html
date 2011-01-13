@@ -106,12 +106,12 @@
         Lumberjack.process(l8);
         e = Lumberjack.currentEntry();
         equal(e.find('.body > .params').length, 1, "should be params lines");
-        equal(e.find('.body > .params:last').text(), 'Parameters: {}');
+        equal(e.find('.body > .params:last').text(), '  Parameters: {}');
 
         Lumberjack.process(l8a);
         e = Lumberjack.currentEntry();
         equal(e.find('.body > .params').length, 2, "should be params lines");
-        equal(e.find('.body > .params:last').text(), 'Parameters: {"region_id"=>"1"}');
+        equal(e.find('.body > .params:last').text(), '  Parameters: {"region_id"=>"1"}');
         
         Lumberjack.appendLineToCurrentEntry(".controller_action", "FOOBAR"); // to href
         Lumberjack.process(l8b);

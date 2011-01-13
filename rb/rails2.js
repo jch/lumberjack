@@ -12,6 +12,21 @@ Lumberjack.rails2 = {
       return ["", false];
     }],
 
+    // set controller_action link
+    [/.*?Param/, function(line, matches) {
+      var reAction = /,? ?"action"=>"(.*?)",? ?/;
+      var reController = /,? ?"controller"=>"(.*?)",? ?/;
+      var action = line.match(reAction)[1];
+      var controller = line.match(reController)[1];
+
+      e = Lumberjack.currentEntry();
+      var text = e.find('.controller_action').text();
+      var href = Lumberjack.config.projectRoot + 'app/controllers/' + controller + "_controller.rb";
+      var link = $("<a>").attr('href', href).text(text);
+      e.find('.controller_action').html(link);
+      return [line, true];
+    }],
+
     Lumberjack.rails.ignoreSQLNoise,
     Lumberjack.rails.wrapInParagraph,
     Lumberjack.rails.exception,
