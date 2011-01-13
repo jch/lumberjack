@@ -6,6 +6,7 @@
   <script src="../jquery.js"></script>
   <script src="qunit.js"></script>
   <script src="../lumberjack.js" type="text/javascript"></script>
+  <script src="../rails.js" type="text/javascript"></script>
   <script src="../rails2.js" type="text/javascript"></script>
   <script type="text/javascript" charset="utf-8">
     $(function() {
@@ -41,7 +42,7 @@
       function setup() {
         Lumberjack.setup({
           prependTo: '#qunit-fixture',
-          projectRoot: "file:///Users/jch/projects/beerpad"
+          projectRoot: "file:///Users/jch/projects/beerpad/"
         })
         Lumberjack.setType('rails2');
         Lumberjack.prependEntry();

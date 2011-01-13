@@ -20,6 +20,7 @@
 		55321D3A12D58BE8008B962B /* axe-splash-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 55321D3912D58BE8008B962B /* axe-splash-bg.png */; };
 		55321D4212D5C070008B962B /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55321D4112D5C070008B962B /* Preferences.xib */; };
 		55321D4612D5C0B8008B962B /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55321D4512D5C0B8008B962B /* PreferencesController.m */; };
+		5552925B12DF8170007B1977 /* rails.js in Resources */ = {isa = PBXBuildFile; fileRef = 5552924B12DF811B007B1977 /* rails.js */; };
 		556C482F12B987A3003F713E /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 556C477712B987A3003F713E /* jquery.js */; };
 		556C483012B987A3003F713E /* reset-min.css in Resources */ = {isa = PBXBuildFile; fileRef = 556C477812B987A3003F713E /* reset-min.css */; };
 		556C483112B987A3003F713E /* splash.html in Resources */ = {isa = PBXBuildFile; fileRef = 556C477912B987A3003F713E /* splash.html */; };
@@ -81,6 +82,7 @@
 		55321D4112D5C070008B962B /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		55321D4412D5C0B8008B962B /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		55321D4512D5C0B8008B962B /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		5552924B12DF811B007B1977 /* rails.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = rails.js; path = rb/rails.js; sourceTree = "<group>"; };
 		556C46F512B97EB9003F713E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = rb/index.html; sourceTree = "<group>"; };
 		556C477712B987A3003F713E /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.js; path = rb/jquery.js; sourceTree = "<group>"; };
 		556C477812B987A3003F713E /* reset-min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "reset-min.css"; path = "rb/reset-min.css"; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5552924B12DF811B007B1977 /* rails.js */,
 				556CCC9012DE5D96006DE45C /* rails3.js */,
 				556CCBE512DE1C91006DE45C /* dsa_pub.pem */,
 				55321D3912D58BE8008B962B /* axe-splash-bg.png */,
@@ -697,6 +700,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5552925B12DF8170007B1977 /* rails.js in Resources */,
 				556CCC9212DE5DB1006DE45C /* rails3.js in Resources */,
 				556CCBC112DE1834006DE45C /* MainMenu.xib in Resources */,
 				5532182212CABE44008B962B /* log.html in Resources */,
