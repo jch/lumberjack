@@ -30,4 +30,5 @@
 - (void) checkFile;
 - (void) handleData:(NSNotification*)aNotification;
 - (void) logFileStats;
+- (NSString*) projectRoot;
 @end

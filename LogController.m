@@ -125,6 +125,9 @@
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {
   NSLog(@"after resources loaded");
+  NSString *js = [NSString stringWithFormat:@"Lumberjack.setup({projectRoot: \"%@\"});", [[self document] projectRoot]];
+  NSLog(@"set project root js: %@", js);
+  [[logView windowScriptObject] evaluateWebScript:js];
   [[self document] startChecking]; // NSDocument doesn't know checkFile, but can't cast b/c then would need to import
 }
 
@@ -134,6 +137,20 @@
 //    // There is no parent frame so this is the main frame.
 //  }
 //}
+
+#pragma mark -
+#pragma mark WebView WebPolicyDelegate
+
+- (void)webView:(WebView *)sender decidePolicyForNavigationAction:(NSDictionary *)actionInformation
+        request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id)listener {
+  NSLog(@"policy delegate %@", [[request URL] absoluteString]);
+  if([[[request URL] absoluteString] rangeOfString:@"Lumberjack.app"].location != NSNotFound) {
+    [listener use];
+  } else {
+    [listener ignore];
+    [[NSWorkspace sharedWorkspace] openURL:[request URL]];
+  }
+}
 
 
 @end

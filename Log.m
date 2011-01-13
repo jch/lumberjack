@@ -43,6 +43,11 @@
   [super dealloc];
 }
 
+- (NSString*) projectRoot
+{
+  return [[[self fileURL] URLByDeletingLastPathComponent] URLByDeletingLastPathComponent];
+}
+
 // schedule checkFile in a run loop indefinitely
 - (void) startChecking
 {
@@ -84,7 +89,7 @@
   NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
   // TODO: buffer partial lines
-  NSArray *lines = [s componentsSeparatedByString:@"\n\n"];
+  NSArray *lines = [s componentsSeparatedByString:@"\n\n\n"];
   NSDictionary *retval = [NSDictionary dictionaryWithObjectsAndKeys:lines, @"lines", nil];
 
   [[NSNotificationCenter defaultCenter] postNotificationName:kLinesAvailable object:self userInfo:retval];
