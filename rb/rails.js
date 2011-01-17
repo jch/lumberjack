@@ -15,6 +15,33 @@ Lumberjack.rails = {
     return [s, true];
   }],
 
+  url: [/http:\/\/(.*?)( |$)/, function(line, matches) {
+    var href = matches[0];
+    if(href[href.length - 1] == ']') {
+      href = href.slice(0, href.length - 1);
+    }
+    var link = $("<a>").attr('href', href).text(href);
+    var myLine = line.replace(href, link.outerHTML());
+    return [myLine, true];
+  }],
+
+  // leading ws, non-space-non-slash followed by optional slash (any number of times)
+  file: [/\s+\/?([^\/ ]+\/?)+\.rb/g, function(line, matches) {
+    for(var i=0; i<matches.length; i++) {
+      var original = matches[i].trim();
+      var href = original;
+      if(href[0] != "/") {
+        href = Lumberjack.config.projectRoot + href;
+      }
+      var link = $("<a>").attr('href', href).text(original);
+      if(original.match(/^app\//)) {
+        link.addClass('bghighlight');
+      }
+      line = line.replace(original, link.outerHTML());
+    }
+    return [line, true];
+  }],
+
   ignoreSQLNoise: [/client_min_messages|SET NAMES 'utf8'|SET SQL_AUTO_IS_NULL/, function(line, matches) {
     return ["", false];
   }],

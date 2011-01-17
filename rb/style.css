@@ -91,3 +91,11 @@ div {
 .body > p, .sql {
   margin-bottom: 0.5em;
 }
+
+.bghighlight {
+  background-color: yellow;
+}
+
+.error {
+  color: red;
+}

@@ -18,6 +18,7 @@
       var l3  = "LoadError (Expected /Users/jch/projects/beerpad/app/controllers/beers_controller.rb to define BeersController):";
       var l4  = "Rendered rescues/_request_and_response (21.7ms)";
       var l5  = "Rendering rescues/layout (internal_server_error)";
+      var l5a = "Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)"
       var l6  = "  SQL (0.1ms)   SET NAMES 'utf8'";
       var l7  = "  SQL (0.1ms)   SET SQL_AUTO_IS_NULL=0";
       var l8  = '  Parameters: {"action"=>"new", "controller"=>"reviews"}';
@@ -38,6 +39,11 @@
       var l19 = "  vendor/bundler_gems/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'";
       var l20 = "  /Users/jch/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'";
       var l21 = "  vendor/bundler_gems/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111";
+      var l22 = "app/views/home/index.html.haml:21:in `_app_views_home_index_html_haml___218630815_2198145100_0'"
+      var l23  = "    18:             %td design";
+      var l23a = "    19:             %td *****";
+      var l23b = "    20:       %div.description.left";
+      
 
       function setup() {
         Lumberjack.setup({
@@ -143,6 +149,26 @@
         teardown();
       });
       
+      test("HTTP urls should be linked", function() {
+        setup();
+        Lumberjack.process(l10);
+        e = Lumberjack.currentEntry();
+        equal(e.find('.body a[href="http://localhost:3000/login"]').length, 1);
+        teardown();
+      });
+
+      test("Files urls should be linked", function() {
+        setup();
+        Lumberjack.process(l19); // relative
+        e = Lumberjack.currentEntry();
+        var href = Lumberjack.config.projectRoot + "vendor/bundler_gems/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb";
+        equal(e.find('.body a[href="' + href + '"]').length, 1);
+
+        Lumberjack.process(l20); // absolute
+        var href = "/Users/jch/.rvm/rubies/ree-1.8.7-2010.02/lib/ruby/1.8/webrick/httpserver.rb"
+        equal(e.find('.body a[href="' + href + '"]').length, 1);
+        teardown();
+      });
     });
   </script>
 </head>

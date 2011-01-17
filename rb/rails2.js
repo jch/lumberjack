@@ -2,6 +2,8 @@
 Lumberjack.rails2 = {
   rules: [
     Lumberjack.rails.cleanup,
+    Lumberjack.rails.url,
+    Lumberjack.rails.file,
 
     [/Processing (\w+#\w+)/, function(line, matches) {
       var extras = line.match(/\(for (.*?) at (.*?)\) \[(.*?)\]/);
