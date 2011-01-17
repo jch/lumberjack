@@ -32,4 +32,5 @@
 - (void) handleData:(NSNotification*)aNotification;
 - (void) logFileStats;
 - (NSURL*) projectRootURL;
+- (NSString*) projectName;
 @end

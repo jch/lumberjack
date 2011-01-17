@@ -97,7 +97,9 @@
 
 - (NSString *)windowTitleForDocumentDisplayName:(NSString *)displayName
 {
-  NSString *title = [[[[self document] fileURL] pathComponents] lastObject];
+  NSString *title = [NSString stringWithFormat:@"%@/%@",
+                     [[self document] projectName],
+                     [[[[self document] fileURL] pathComponents] lastObject]];
   title = title ? title : @"Lumberjack";
   return title;
 }

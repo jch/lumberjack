@@ -17,8 +17,6 @@
 @synthesize file;
 @synthesize timer;
 
-#define kBytesToRead 3000
-
 - (id) init
 {
   NSLog(@"log init");
@@ -46,6 +44,11 @@
 - (NSURL*) projectRootURL
 {
   return [[[self fileURL] URLByDeletingLastPathComponent] URLByDeletingLastPathComponent];
+}
+
+- (NSString*) projectName
+{
+  return [[[self projectRootURL] pathComponents] lastObject];
 }
 
 // schedule checkFile in a run loop indefinitely
