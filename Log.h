@@ -9,6 +9,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
+#include "Constants.h"
 
 @interface Log : NSDocument
 {
