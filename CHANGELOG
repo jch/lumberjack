@@ -2,6 +2,7 @@ CHANGELOG
 
 2011/01/19
 
+ - http://book.git-scm.com/5_git_hooks.html added pre-commit hook for acceptance tests
  - http://selenium.googlecode.com/svn/trunk/docs/api/rb/Selenium/WebDriver/Find.html
  - http://selenium.googlecode.com/svn/trunk/docs/api/rb/Selenium/WebDriver/Remote/Bridge.html
 
