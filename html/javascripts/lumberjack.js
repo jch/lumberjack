@@ -55,7 +55,7 @@ Lumberjack.setup = function(config) {
 }
 
 Lumberjack.setType = function(logType) {
-  Lumberjack.rules = Lumberjack[logType].rules;
+  this.rules = Lumberjack[logType].rules;
 }
 
 Lumberjack.entries = function() {

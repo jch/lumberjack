@@ -16,18 +16,19 @@ module Lumberjack
         @results = {}
         @success = true
 
-        def run_test(name, t = nil)
+        def run_test(name, t = 1.5)
           @b.visit "/"
           @b.visit("/test.html##{name.to_s}")
-          sleep t if t
+          sleep t
           @results[name.to_sym] = @b.find('.result').text
           @success = @success && @b.find('.failed').text == "0"
           if not @success
-            puts "FAILED!!!"
+            require 'ruby-debug'
+            debugger
           end
         end
 
-        puts "\nRunning Lumberjack acceptance tests...\n"
+        puts "\nRunning Lumberjack acceptance tests...\n\n"
         Benchmark.bm(15) do |x|
           x.report("test_lumberjack") { run_test :test_lumberjack }
           x.report("test_rails2") { run_test :test_rails2, 6 }
@@ -42,6 +43,12 @@ module Lumberjack
             puts "  " + s
           end
           puts
+        end
+
+        if @success
+          puts "All acceptance tests passed!"
+        else
+          puts "Failed to pass all acceptance tests, please fix and try again."
         end
         @success
       end
