@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>test_lumberjack</title>
+  <link rel="stylesheet" href="stylesheets/qunit.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <script type="text/javascript" src="javascripts/jquery.js"></script>
+  <script src="javascripts/qunit.js"></script>
+  <script type="text/javascript" src="javascripts/lumberjack.js"></script>
+  <script type="text/javascript" src="javascripts/plugins.js"></script>
+</head>
+<body>
+  <h1 id="qunit-header">QUnit example</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="qunit-fixture">
+    test markup, will be hidden
+  </div>
+  <script type="text/javascript" charset="utf-8">
+    var testElement = document.createElement('script');
+    testElement.src = "javascripts/tests/" + window.location.hash.slice(1, window.location.hash.length) + ".js";
+    testElement.type = "text/javascript";
+
+    var head = document.getElementsByTagName('head')[0];
+    head.appendChild(testElement);
+  </script>
+</body>

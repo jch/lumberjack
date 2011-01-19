@@ -8,28 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1DDD582C0DA1D0D100B32029 /* Log.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* Log.xib */; };
-		5532182212CABE44008B962B /* log.html in Resources */ = {isa = PBXBuildFile; fileRef = 5532181F12CABE44008B962B /* log.html */; };
-		5532182512CABE4C008B962B /* lumberjack.js in Resources */ = {isa = PBXBuildFile; fileRef = 5532182012CABE44008B962B /* lumberjack.js */; };
-		5532182612CABE4C008B962B /* rails2.js in Resources */ = {isa = PBXBuildFile; fileRef = 5532182112CABE44008B962B /* rails2.js */; };
 		5532197712CC25CB008B962B /* LJDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5532197612CC25CB008B962B /* LJDocumentController.m */; };
 		553219FB12CD06E2008B962B /* LJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 553219FA12CD06E2008B962B /* LJAppDelegate.m */; };
 		55321C6412D52063008B962B /* AVWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 55321C6212D52063008B962B /* AVWindow.m */; };
 		55321D0712D54C2B008B962B /* pinned.png in Resources */ = {isa = PBXBuildFile; fileRef = 55321D0612D54C2B008B962B /* pinned.png */; };
 		55321D1512D54E49008B962B /* unpinned.png in Resources */ = {isa = PBXBuildFile; fileRef = 55321D1412D54E49008B962B /* unpinned.png */; };
 		55321D2812D57FD6008B962B /* axe_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 55321D2712D57FD6008B962B /* axe_icon.icns */; };
-		55321D3A12D58BE8008B962B /* axe-splash-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 55321D3912D58BE8008B962B /* axe-splash-bg.png */; };
 		55321D4212D5C070008B962B /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55321D4112D5C070008B962B /* Preferences.xib */; };
 		55321D4612D5C0B8008B962B /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55321D4512D5C0B8008B962B /* PreferencesController.m */; };
-		5552925B12DF8170007B1977 /* rails.js in Resources */ = {isa = PBXBuildFile; fileRef = 5552924B12DF811B007B1977 /* rails.js */; };
-		556C482F12B987A3003F713E /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 556C477712B987A3003F713E /* jquery.js */; };
-		556C483012B987A3003F713E /* reset-min.css in Resources */ = {isa = PBXBuildFile; fileRef = 556C477812B987A3003F713E /* reset-min.css */; };
-		556C483112B987A3003F713E /* splash.html in Resources */ = {isa = PBXBuildFile; fileRef = 556C477912B987A3003F713E /* splash.html */; };
-		556C483212B987A3003F713E /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 556C477A12B987A3003F713E /* style.css */; };
+		555294A812E60459007B1977 /* html in Resources */ = {isa = PBXBuildFile; fileRef = 5552948B12E60459007B1977 /* html */; };
 		556CCBAC12DE1617006DE45C /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 556CCBAB12DE1617006DE45C /* Sparkle.framework */; };
 		556CCBC112DE1834006DE45C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		556CCBE612DE1C91006DE45C /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 556CCBE512DE1C91006DE45C /* dsa_pub.pem */; };
 		556CCC1912DE25B2006DE45C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556CCBAB12DE1617006DE45C /* Sparkle.framework */; };
-		556CCC9212DE5DB1006DE45C /* rails3.js in Resources */ = {isa = PBXBuildFile; fileRef = 556CCC9012DE5D96006DE45C /* rails3.js */; };
 		558A9A7C12B2E4F200F2B380 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558A9A7B12B2E4F200F2B380 /* WebKit.framework */; };
 		558A9ABF12B2ED2800F2B380 /* LogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558A9ABE12B2ED2800F2B380 /* LogController.m */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -65,9 +56,6 @@
 		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		5532181F12CABE44008B962B /* log.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = log.html; path = rb/log.html; sourceTree = "<group>"; };
-		5532182012CABE44008B962B /* lumberjack.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = lumberjack.js; path = rb/lumberjack.js; sourceTree = "<group>"; };
-		5532182112CABE44008B962B /* rails2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = rails2.js; path = rb/rails2.js; sourceTree = "<group>"; };
 		5532197512CC25CB008B962B /* LJDocumentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJDocumentController.h; sourceTree = "<group>"; };
 		5532197612CC25CB008B962B /* LJDocumentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJDocumentController.m; sourceTree = "<group>"; };
 		553219F912CD06E2008B962B /* LJAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJAppDelegate.h; sourceTree = "<group>"; };
@@ -78,142 +66,13 @@
 		55321D0612D54C2B008B962B /* pinned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinned.png; sourceTree = "<group>"; };
 		55321D1412D54E49008B962B /* unpinned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unpinned.png; sourceTree = "<group>"; };
 		55321D2712D57FD6008B962B /* axe_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = axe_icon.icns; sourceTree = "<group>"; };
-		55321D3912D58BE8008B962B /* axe-splash-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "axe-splash-bg.png"; path = "rb/axe-splash-bg.png"; sourceTree = "<group>"; };
 		55321D4112D5C070008B962B /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		55321D4412D5C0B8008B962B /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		55321D4512D5C0B8008B962B /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
-		5552924B12DF811B007B1977 /* rails.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = rails.js; path = rb/rails.js; sourceTree = "<group>"; };
-		556C46F512B97EB9003F713E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = rb/index.html; sourceTree = "<group>"; };
-		556C477712B987A3003F713E /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.js; path = rb/jquery.js; sourceTree = "<group>"; };
-		556C477812B987A3003F713E /* reset-min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "reset-min.css"; path = "rb/reset-min.css"; sourceTree = "<group>"; };
-		556C477912B987A3003F713E /* splash.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = splash.html; path = rb/splash.html; sourceTree = "<group>"; };
-		556C477A12B987A3003F713E /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = style.css; path = rb/style.css; sourceTree = "<group>"; };
-		556C47A112B987A3003F713E /* FABridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FABridge.js; sourceTree = "<group>"; };
-		556C47A412B987A3003F713E /* FABridge.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FABridge.as; sourceTree = "<group>"; };
-		556C47A512B987A3003F713E /* build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
-		556C47AA12B987A3003F713E /* RFC2817Socket.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RFC2817Socket.as; sourceTree = "<group>"; };
-		556C47AD12B987A3003F713E /* MD5.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MD5.as; sourceTree = "<group>"; };
-		556C47B112B987A3003F713E /* MozillaRootCertificates.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MozillaRootCertificates.as; sourceTree = "<group>"; };
-		556C47B212B987A3003F713E /* X509Certificate.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = X509Certificate.as; sourceTree = "<group>"; };
-		556C47B312B987A3003F713E /* X509CertificateCollection.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = X509CertificateCollection.as; sourceTree = "<group>"; };
-		556C47B412B987A3003F713E /* Crypto.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Crypto.as; sourceTree = "<group>"; };
-		556C47B612B987A3003F713E /* HMAC.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HMAC.as; sourceTree = "<group>"; };
-		556C47B712B987A3003F713E /* IHash.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IHash.as; sourceTree = "<group>"; };
-		556C47B812B987A3003F713E /* IHMAC.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IHMAC.as; sourceTree = "<group>"; };
-		556C47B912B987A3003F713E /* MAC.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MAC.as; sourceTree = "<group>"; };
-		556C47BA12B987A3003F713E /* MD2.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MD2.as; sourceTree = "<group>"; };
-		556C47BB12B987A3003F713E /* MD5.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MD5.as; sourceTree = "<group>"; };
-		556C47BC12B987A3003F713E /* SHA1.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SHA1.as; sourceTree = "<group>"; };
-		556C47BD12B987A3003F713E /* SHA224.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SHA224.as; sourceTree = "<group>"; };
-		556C47BE12B987A3003F713E /* SHA256.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SHA256.as; sourceTree = "<group>"; };
-		556C47BF12B987A3003F713E /* SHABase.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SHABase.as; sourceTree = "<group>"; };
-		556C47C112B987A3003F713E /* ARC4.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ARC4.as; sourceTree = "<group>"; };
-		556C47C212B987A3003F713E /* IPRNG.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IPRNG.as; sourceTree = "<group>"; };
-		556C47C312B987A3003F713E /* Random.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Random.as; sourceTree = "<group>"; };
-		556C47C412B987A3003F713E /* TLSPRF.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TLSPRF.as; sourceTree = "<group>"; };
-		556C47C612B987A3003F713E /* RSAKey.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RSAKey.as; sourceTree = "<group>"; };
-		556C47C812B987A3003F713E /* AESKey.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AESKey.as; sourceTree = "<group>"; };
-		556C47C912B987A3003F713E /* aeskey.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = aeskey.pl; sourceTree = "<group>"; };
-		556C47CA12B987A3003F713E /* BlowFishKey.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BlowFishKey.as; sourceTree = "<group>"; };
-		556C47CB12B987A3003F713E /* CBCMode.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CBCMode.as; sourceTree = "<group>"; };
-		556C47CC12B987A3003F713E /* CFB8Mode.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CFB8Mode.as; sourceTree = "<group>"; };
-		556C47CD12B987A3003F713E /* CFBMode.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CFBMode.as; sourceTree = "<group>"; };
-		556C47CE12B987A3003F713E /* CTRMode.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CTRMode.as; sourceTree = "<group>"; };
-		556C47CF12B987A3003F713E /* DESKey.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DESKey.as; sourceTree = "<group>"; };
-		556C47D012B987A3003F713E /* dump.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dump.txt; sourceTree = "<group>"; };
-		556C47D112B987A3003F713E /* ECBMode.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ECBMode.as; sourceTree = "<group>"; };
-		556C47D212B987A3003F713E /* ICipher.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ICipher.as; sourceTree = "<group>"; };
-		556C47D312B987A3003F713E /* IMode.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IMode.as; sourceTree = "<group>"; };
-		556C47D412B987A3003F713E /* IPad.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IPad.as; sourceTree = "<group>"; };
-		556C47D512B987A3003F713E /* IStreamCipher.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IStreamCipher.as; sourceTree = "<group>"; };
-		556C47D612B987A3003F713E /* ISymmetricKey.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ISymmetricKey.as; sourceTree = "<group>"; };
-		556C47D712B987A3003F713E /* IVMode.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IVMode.as; sourceTree = "<group>"; };
-		556C47D812B987A3003F713E /* NullPad.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NullPad.as; sourceTree = "<group>"; };
-		556C47D912B987A3003F713E /* OFBMode.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFBMode.as; sourceTree = "<group>"; };
-		556C47DA12B987A3003F713E /* PKCS5.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PKCS5.as; sourceTree = "<group>"; };
-		556C47DB12B987A3003F713E /* SimpleIVMode.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleIVMode.as; sourceTree = "<group>"; };
-		556C47DC12B987A3003F713E /* SSLPad.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SSLPad.as; sourceTree = "<group>"; };
-		556C47DD12B987A3003F713E /* TLSPad.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TLSPad.as; sourceTree = "<group>"; };
-		556C47DE12B987A3003F713E /* TripleDESKey.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TripleDESKey.as; sourceTree = "<group>"; };
-		556C47DF12B987A3003F713E /* XTeaKey.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XTeaKey.as; sourceTree = "<group>"; };
-		556C47E112B987A3003F713E /* AESKeyTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AESKeyTest.as; sourceTree = "<group>"; };
-		556C47E212B987A3003F713E /* ARC4Test.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ARC4Test.as; sourceTree = "<group>"; };
-		556C47E312B987A3003F713E /* BigIntegerTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BigIntegerTest.as; sourceTree = "<group>"; };
-		556C47E412B987A3003F713E /* BlowFishKeyTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BlowFishKeyTest.as; sourceTree = "<group>"; };
-		556C47E512B987A3003F713E /* CBCModeTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CBCModeTest.as; sourceTree = "<group>"; };
-		556C47E612B987A3003F713E /* CFB8ModeTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CFB8ModeTest.as; sourceTree = "<group>"; };
-		556C47E712B987A3003F713E /* CFBModeTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CFBModeTest.as; sourceTree = "<group>"; };
-		556C47E812B987A3003F713E /* CTRModeTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CTRModeTest.as; sourceTree = "<group>"; };
-		556C47E912B987A3003F713E /* DESKeyTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DESKeyTest.as; sourceTree = "<group>"; };
-		556C47EA12B987A3003F713E /* ECBModeTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ECBModeTest.as; sourceTree = "<group>"; };
-		556C47EB12B987A3003F713E /* HMACTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HMACTest.as; sourceTree = "<group>"; };
-		556C47EC12B987A3003F713E /* ITestHarness.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITestHarness.as; sourceTree = "<group>"; };
-		556C47ED12B987A3003F713E /* MD2Test.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MD2Test.as; sourceTree = "<group>"; };
-		556C47EE12B987A3003F713E /* MD5Test.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MD5Test.as; sourceTree = "<group>"; };
-		556C47EF12B987A3003F713E /* OFBModeTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFBModeTest.as; sourceTree = "<group>"; };
-		556C47F012B987A3003F713E /* RSAKeyTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RSAKeyTest.as; sourceTree = "<group>"; };
-		556C47F112B987A3003F713E /* SHA1Test.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SHA1Test.as; sourceTree = "<group>"; };
-		556C47F212B987A3003F713E /* SHA224Test.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SHA224Test.as; sourceTree = "<group>"; };
-		556C47F312B987A3003F713E /* SHA256Test.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SHA256Test.as; sourceTree = "<group>"; };
-		556C47F412B987A3003F713E /* TestCase.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestCase.as; sourceTree = "<group>"; };
-		556C47F512B987A3003F713E /* TLSPRFTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TLSPRFTest.as; sourceTree = "<group>"; };
-		556C47F612B987A3003F713E /* TripleDESKeyTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TripleDESKeyTest.as; sourceTree = "<group>"; };
-		556C47F712B987A3003F713E /* XTeaKeyTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XTeaKeyTest.as; sourceTree = "<group>"; };
-		556C47F912B987A3003F713E /* BulkCiphers.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BulkCiphers.as; sourceTree = "<group>"; };
-		556C47FA12B987A3003F713E /* CipherSuites.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CipherSuites.as; sourceTree = "<group>"; };
-		556C47FB12B987A3003F713E /* IConnectionState.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IConnectionState.as; sourceTree = "<group>"; };
-		556C47FC12B987A3003F713E /* ISecurityParameters.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ISecurityParameters.as; sourceTree = "<group>"; };
-		556C47FD12B987A3003F713E /* KeyExchanges.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KeyExchanges.as; sourceTree = "<group>"; };
-		556C47FE12B987A3003F713E /* MACs.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MACs.as; sourceTree = "<group>"; };
-		556C47FF12B987A3003F713E /* SSLConnectionState.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SSLConnectionState.as; sourceTree = "<group>"; };
-		556C480012B987A3003F713E /* SSLEvent.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SSLEvent.as; sourceTree = "<group>"; };
-		556C480112B987A3003F713E /* SSLSecurityParameters.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SSLSecurityParameters.as; sourceTree = "<group>"; };
-		556C480212B987A3003F713E /* TLSConfig.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TLSConfig.as; sourceTree = "<group>"; };
-		556C480312B987A3003F713E /* TLSConnectionState.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TLSConnectionState.as; sourceTree = "<group>"; };
-		556C480412B987A3003F713E /* TLSEngine.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TLSEngine.as; sourceTree = "<group>"; };
-		556C480512B987A3003F713E /* TLSError.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TLSError.as; sourceTree = "<group>"; };
-		556C480612B987A3003F713E /* TLSEvent.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TLSEvent.as; sourceTree = "<group>"; };
-		556C480712B987A3003F713E /* TLSSecurityParameters.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TLSSecurityParameters.as; sourceTree = "<group>"; };
-		556C480812B987A3003F713E /* TLSSocket.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TLSSocket.as; sourceTree = "<group>"; };
-		556C480912B987A3003F713E /* TLSSocketEvent.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TLSSocketEvent.as; sourceTree = "<group>"; };
-		556C480A12B987A3003F713E /* TLSTest.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TLSTest.as; sourceTree = "<group>"; };
-		556C480C12B987A3003F713E /* BarrettReduction.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BarrettReduction.as; sourceTree = "<group>"; };
-		556C480D12B987A3003F713E /* bi_internal.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bi_internal.as; sourceTree = "<group>"; };
-		556C480E12B987A3003F713E /* BigInteger.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BigInteger.as; sourceTree = "<group>"; };
-		556C480F12B987A3003F713E /* ClassicReduction.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ClassicReduction.as; sourceTree = "<group>"; };
-		556C481012B987A3003F713E /* IReduction.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IReduction.as; sourceTree = "<group>"; };
-		556C481112B987A3003F713E /* MontgomeryReduction.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MontgomeryReduction.as; sourceTree = "<group>"; };
-		556C481212B987A3003F713E /* NullReduction.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NullReduction.as; sourceTree = "<group>"; };
-		556C481412B987A3003F713E /* ArrayUtil.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ArrayUtil.as; sourceTree = "<group>"; };
-		556C481512B987A3003F713E /* Base64.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Base64.as; sourceTree = "<group>"; };
-		556C481712B987A3003F713E /* ByteString.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ByteString.as; sourceTree = "<group>"; };
-		556C481812B987A3003F713E /* DER.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DER.as; sourceTree = "<group>"; };
-		556C481912B987A3003F713E /* IAsn1Type.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IAsn1Type.as; sourceTree = "<group>"; };
-		556C481A12B987A3003F713E /* Integer.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Integer.as; sourceTree = "<group>"; };
-		556C481B12B987A3003F713E /* ObjectIdentifier.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectIdentifier.as; sourceTree = "<group>"; };
-		556C481C12B987A3003F713E /* OID.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OID.as; sourceTree = "<group>"; };
-		556C481D12B987A3003F713E /* PEM.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PEM.as; sourceTree = "<group>"; };
-		556C481E12B987A3003F713E /* PrintableString.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PrintableString.as; sourceTree = "<group>"; };
-		556C481F12B987A3003F713E /* Sequence.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sequence.as; sourceTree = "<group>"; };
-		556C482012B987A3003F713E /* Set.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Set.as; sourceTree = "<group>"; };
-		556C482112B987A3003F713E /* Type.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Type.as; sourceTree = "<group>"; };
-		556C482212B987A3003F713E /* UTCTime.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UTCTime.as; sourceTree = "<group>"; };
-		556C482312B987A3003F713E /* Hex.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Hex.as; sourceTree = "<group>"; };
-		556C482412B987A3003F713E /* Memory.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Memory.as; sourceTree = "<group>"; };
-		556C482512B987A3003F713E /* WebSocket.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebSocket.as; sourceTree = "<group>"; };
-		556C482612B987A3003F713E /* WebSocketMain.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebSocketMain.as; sourceTree = "<group>"; };
-		556C482712B987A3003F713E /* WebSocketMainInsecure.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebSocketMainInsecure.as; sourceTree = "<group>"; };
-		556C482812B987A3003F713E /* WebSocketStateEvent.as */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebSocketStateEvent.as; sourceTree = "<group>"; };
-		556C482912B987A3003F713E /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		556C482A12B987A3003F713E /* sample.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample.html; sourceTree = "<group>"; };
-		556C482B12B987A3003F713E /* swfobject.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = swfobject.js; sourceTree = "<group>"; };
-		556C482C12B987A3003F713E /* web_socket.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = web_socket.js; sourceTree = "<group>"; };
-		556C482D12B987A3003F713E /* WebSocketMain.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WebSocketMain.swf; sourceTree = "<group>"; };
-		556C482E12B987A3003F713E /* WebSocketMainInsecure.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = WebSocketMainInsecure.zip; sourceTree = "<group>"; };
+		5552948B12E60459007B1977 /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
 		556CCB1312D68653006DE45C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		556CCBAB12DE1617006DE45C /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		556CCBE512DE1C91006DE45C /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
-		556CCC9012DE5D96006DE45C /* rails3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = rails3.js; path = rb/rails3.js; sourceTree = "<group>"; };
 		558A9A7B12B2E4F200F2B380 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		558A9ABD12B2ED2800F2B380 /* LogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogController.h; sourceTree = "<group>"; };
 		558A9ABE12B2ED2800F2B380 /* LogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogController.m; sourceTree = "<group>"; };
@@ -266,6 +125,7 @@
 		2A37F4AAFDCFA73011CA2CEA /* lumberjack */ = {
 			isa = PBXGroup;
 			children = (
+				5552948B12E60459007B1977 /* html */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
@@ -306,22 +166,10 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5552924B12DF811B007B1977 /* rails.js */,
-				556CCC9012DE5D96006DE45C /* rails3.js */,
 				556CCBE512DE1C91006DE45C /* dsa_pub.pem */,
-				55321D3912D58BE8008B962B /* axe-splash-bg.png */,
 				55321D2712D57FD6008B962B /* axe_icon.icns */,
 				55321D1412D54E49008B962B /* unpinned.png */,
 				55321D0612D54C2B008B962B /* pinned.png */,
-				5532181F12CABE44008B962B /* log.html */,
-				5532182012CABE44008B962B /* lumberjack.js */,
-				5532182112CABE44008B962B /* rails2.js */,
-				556C477712B987A3003F713E /* jquery.js */,
-				556C477812B987A3003F713E /* reset-min.css */,
-				556C477912B987A3003F713E /* splash.html */,
-				556C477A12B987A3003F713E /* style.css */,
-				556C477B12B987A3003F713E /* web-socket-js */,
-				556C46F512B97EB9003F713E /* index.html */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
 				8D15AC360486D014006FF6A4 /* lumberjack-Info.plist */,
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
@@ -357,296 +205,6 @@
 				55321C6312D52063008B962B /* README */,
 			);
 			path = AVWindow;
-			sourceTree = "<group>";
-		};
-		556C477B12B987A3003F713E /* web-socket-js */ = {
-			isa = PBXGroup;
-			children = (
-				556C47A112B987A3003F713E /* FABridge.js */,
-				556C47A212B987A3003F713E /* flash-src */,
-				556C482912B987A3003F713E /* README.txt */,
-				556C482A12B987A3003F713E /* sample.html */,
-				556C482B12B987A3003F713E /* swfobject.js */,
-				556C482C12B987A3003F713E /* web_socket.js */,
-				556C482D12B987A3003F713E /* WebSocketMain.swf */,
-				556C482E12B987A3003F713E /* WebSocketMainInsecure.zip */,
-			);
-			name = "web-socket-js";
-			path = "rb/web-socket-js";
-			sourceTree = "<group>";
-		};
-		556C47A212B987A3003F713E /* flash-src */ = {
-			isa = PBXGroup;
-			children = (
-				556C47A312B987A3003F713E /* bridge */,
-				556C47A512B987A3003F713E /* build.sh */,
-				556C47A612B987A3003F713E /* com */,
-				556C482512B987A3003F713E /* WebSocket.as */,
-				556C482612B987A3003F713E /* WebSocketMain.as */,
-				556C482712B987A3003F713E /* WebSocketMainInsecure.as */,
-				556C482812B987A3003F713E /* WebSocketStateEvent.as */,
-			);
-			path = "flash-src";
-			sourceTree = "<group>";
-		};
-		556C47A312B987A3003F713E /* bridge */ = {
-			isa = PBXGroup;
-			children = (
-				556C47A412B987A3003F713E /* FABridge.as */,
-			);
-			path = bridge;
-			sourceTree = "<group>";
-		};
-		556C47A612B987A3003F713E /* com */ = {
-			isa = PBXGroup;
-			children = (
-				556C47A712B987A3003F713E /* adobe */,
-				556C47AB12B987A3003F713E /* gsolo */,
-				556C47AE12B987A3003F713E /* hurlant */,
-			);
-			path = com;
-			sourceTree = "<group>";
-		};
-		556C47A712B987A3003F713E /* adobe */ = {
-			isa = PBXGroup;
-			children = (
-				556C47A812B987A3003F713E /* net */,
-			);
-			path = adobe;
-			sourceTree = "<group>";
-		};
-		556C47A812B987A3003F713E /* net */ = {
-			isa = PBXGroup;
-			children = (
-				556C47A912B987A3003F713E /* proxies */,
-			);
-			path = net;
-			sourceTree = "<group>";
-		};
-		556C47A912B987A3003F713E /* proxies */ = {
-			isa = PBXGroup;
-			children = (
-				556C47AA12B987A3003F713E /* RFC2817Socket.as */,
-			);
-			path = proxies;
-			sourceTree = "<group>";
-		};
-		556C47AB12B987A3003F713E /* gsolo */ = {
-			isa = PBXGroup;
-			children = (
-				556C47AC12B987A3003F713E /* encryption */,
-			);
-			path = gsolo;
-			sourceTree = "<group>";
-		};
-		556C47AC12B987A3003F713E /* encryption */ = {
-			isa = PBXGroup;
-			children = (
-				556C47AD12B987A3003F713E /* MD5.as */,
-			);
-			path = encryption;
-			sourceTree = "<group>";
-		};
-		556C47AE12B987A3003F713E /* hurlant */ = {
-			isa = PBXGroup;
-			children = (
-				556C47AF12B987A3003F713E /* crypto */,
-				556C480B12B987A3003F713E /* math */,
-				556C481312B987A3003F713E /* util */,
-			);
-			path = hurlant;
-			sourceTree = "<group>";
-		};
-		556C47AF12B987A3003F713E /* crypto */ = {
-			isa = PBXGroup;
-			children = (
-				556C47B012B987A3003F713E /* cert */,
-				556C47B412B987A3003F713E /* Crypto.as */,
-				556C47B512B987A3003F713E /* hash */,
-				556C47C012B987A3003F713E /* prng */,
-				556C47C512B987A3003F713E /* rsa */,
-				556C47C712B987A3003F713E /* symmetric */,
-				556C47E012B987A3003F713E /* tests */,
-				556C47F812B987A3003F713E /* tls */,
-			);
-			path = crypto;
-			sourceTree = "<group>";
-		};
-		556C47B012B987A3003F713E /* cert */ = {
-			isa = PBXGroup;
-			children = (
-				556C47B112B987A3003F713E /* MozillaRootCertificates.as */,
-				556C47B212B987A3003F713E /* X509Certificate.as */,
-				556C47B312B987A3003F713E /* X509CertificateCollection.as */,
-			);
-			path = cert;
-			sourceTree = "<group>";
-		};
-		556C47B512B987A3003F713E /* hash */ = {
-			isa = PBXGroup;
-			children = (
-				556C47B612B987A3003F713E /* HMAC.as */,
-				556C47B712B987A3003F713E /* IHash.as */,
-				556C47B812B987A3003F713E /* IHMAC.as */,
-				556C47B912B987A3003F713E /* MAC.as */,
-				556C47BA12B987A3003F713E /* MD2.as */,
-				556C47BB12B987A3003F713E /* MD5.as */,
-				556C47BC12B987A3003F713E /* SHA1.as */,
-				556C47BD12B987A3003F713E /* SHA224.as */,
-				556C47BE12B987A3003F713E /* SHA256.as */,
-				556C47BF12B987A3003F713E /* SHABase.as */,
-			);
-			path = hash;
-			sourceTree = "<group>";
-		};
-		556C47C012B987A3003F713E /* prng */ = {
-			isa = PBXGroup;
-			children = (
-				556C47C112B987A3003F713E /* ARC4.as */,
-				556C47C212B987A3003F713E /* IPRNG.as */,
-				556C47C312B987A3003F713E /* Random.as */,
-				556C47C412B987A3003F713E /* TLSPRF.as */,
-			);
-			path = prng;
-			sourceTree = "<group>";
-		};
-		556C47C512B987A3003F713E /* rsa */ = {
-			isa = PBXGroup;
-			children = (
-				556C47C612B987A3003F713E /* RSAKey.as */,
-			);
-			path = rsa;
-			sourceTree = "<group>";
-		};
-		556C47C712B987A3003F713E /* symmetric */ = {
-			isa = PBXGroup;
-			children = (
-				556C47C812B987A3003F713E /* AESKey.as */,
-				556C47C912B987A3003F713E /* aeskey.pl */,
-				556C47CA12B987A3003F713E /* BlowFishKey.as */,
-				556C47CB12B987A3003F713E /* CBCMode.as */,
-				556C47CC12B987A3003F713E /* CFB8Mode.as */,
-				556C47CD12B987A3003F713E /* CFBMode.as */,
-				556C47CE12B987A3003F713E /* CTRMode.as */,
-				556C47CF12B987A3003F713E /* DESKey.as */,
-				556C47D012B987A3003F713E /* dump.txt */,
-				556C47D112B987A3003F713E /* ECBMode.as */,
-				556C47D212B987A3003F713E /* ICipher.as */,
-				556C47D312B987A3003F713E /* IMode.as */,
-				556C47D412B987A3003F713E /* IPad.as */,
-				556C47D512B987A3003F713E /* IStreamCipher.as */,
-				556C47D612B987A3003F713E /* ISymmetricKey.as */,
-				556C47D712B987A3003F713E /* IVMode.as */,
-				556C47D812B987A3003F713E /* NullPad.as */,
-				556C47D912B987A3003F713E /* OFBMode.as */,
-				556C47DA12B987A3003F713E /* PKCS5.as */,
-				556C47DB12B987A3003F713E /* SimpleIVMode.as */,
-				556C47DC12B987A3003F713E /* SSLPad.as */,
-				556C47DD12B987A3003F713E /* TLSPad.as */,
-				556C47DE12B987A3003F713E /* TripleDESKey.as */,
-				556C47DF12B987A3003F713E /* XTeaKey.as */,
-			);
-			path = symmetric;
-			sourceTree = "<group>";
-		};
-		556C47E012B987A3003F713E /* tests */ = {
-			isa = PBXGroup;
-			children = (
-				556C47E112B987A3003F713E /* AESKeyTest.as */,
-				556C47E212B987A3003F713E /* ARC4Test.as */,
-				556C47E312B987A3003F713E /* BigIntegerTest.as */,
-				556C47E412B987A3003F713E /* BlowFishKeyTest.as */,
-				556C47E512B987A3003F713E /* CBCModeTest.as */,
-				556C47E612B987A3003F713E /* CFB8ModeTest.as */,
-				556C47E712B987A3003F713E /* CFBModeTest.as */,
-				556C47E812B987A3003F713E /* CTRModeTest.as */,
-				556C47E912B987A3003F713E /* DESKeyTest.as */,
-				556C47EA12B987A3003F713E /* ECBModeTest.as */,
-				556C47EB12B987A3003F713E /* HMACTest.as */,
-				556C47EC12B987A3003F713E /* ITestHarness.as */,
-				556C47ED12B987A3003F713E /* MD2Test.as */,
-				556C47EE12B987A3003F713E /* MD5Test.as */,
-				556C47EF12B987A3003F713E /* OFBModeTest.as */,
-				556C47F012B987A3003F713E /* RSAKeyTest.as */,
-				556C47F112B987A3003F713E /* SHA1Test.as */,
-				556C47F212B987A3003F713E /* SHA224Test.as */,
-				556C47F312B987A3003F713E /* SHA256Test.as */,
-				556C47F412B987A3003F713E /* TestCase.as */,
-				556C47F512B987A3003F713E /* TLSPRFTest.as */,
-				556C47F612B987A3003F713E /* TripleDESKeyTest.as */,
-				556C47F712B987A3003F713E /* XTeaKeyTest.as */,
-			);
-			path = tests;
-			sourceTree = "<group>";
-		};
-		556C47F812B987A3003F713E /* tls */ = {
-			isa = PBXGroup;
-			children = (
-				556C47F912B987A3003F713E /* BulkCiphers.as */,
-				556C47FA12B987A3003F713E /* CipherSuites.as */,
-				556C47FB12B987A3003F713E /* IConnectionState.as */,
-				556C47FC12B987A3003F713E /* ISecurityParameters.as */,
-				556C47FD12B987A3003F713E /* KeyExchanges.as */,
-				556C47FE12B987A3003F713E /* MACs.as */,
-				556C47FF12B987A3003F713E /* SSLConnectionState.as */,
-				556C480012B987A3003F713E /* SSLEvent.as */,
-				556C480112B987A3003F713E /* SSLSecurityParameters.as */,
-				556C480212B987A3003F713E /* TLSConfig.as */,
-				556C480312B987A3003F713E /* TLSConnectionState.as */,
-				556C480412B987A3003F713E /* TLSEngine.as */,
-				556C480512B987A3003F713E /* TLSError.as */,
-				556C480612B987A3003F713E /* TLSEvent.as */,
-				556C480712B987A3003F713E /* TLSSecurityParameters.as */,
-				556C480812B987A3003F713E /* TLSSocket.as */,
-				556C480912B987A3003F713E /* TLSSocketEvent.as */,
-				556C480A12B987A3003F713E /* TLSTest.as */,
-			);
-			path = tls;
-			sourceTree = "<group>";
-		};
-		556C480B12B987A3003F713E /* math */ = {
-			isa = PBXGroup;
-			children = (
-				556C480C12B987A3003F713E /* BarrettReduction.as */,
-				556C480D12B987A3003F713E /* bi_internal.as */,
-				556C480E12B987A3003F713E /* BigInteger.as */,
-				556C480F12B987A3003F713E /* ClassicReduction.as */,
-				556C481012B987A3003F713E /* IReduction.as */,
-				556C481112B987A3003F713E /* MontgomeryReduction.as */,
-				556C481212B987A3003F713E /* NullReduction.as */,
-			);
-			path = math;
-			sourceTree = "<group>";
-		};
-		556C481312B987A3003F713E /* util */ = {
-			isa = PBXGroup;
-			children = (
-				556C481412B987A3003F713E /* ArrayUtil.as */,
-				556C481512B987A3003F713E /* Base64.as */,
-				556C481612B987A3003F713E /* der */,
-				556C482312B987A3003F713E /* Hex.as */,
-				556C482412B987A3003F713E /* Memory.as */,
-			);
-			path = util;
-			sourceTree = "<group>";
-		};
-		556C481612B987A3003F713E /* der */ = {
-			isa = PBXGroup;
-			children = (
-				556C481712B987A3003F713E /* ByteString.as */,
-				556C481812B987A3003F713E /* DER.as */,
-				556C481912B987A3003F713E /* IAsn1Type.as */,
-				556C481A12B987A3003F713E /* Integer.as */,
-				556C481B12B987A3003F713E /* ObjectIdentifier.as */,
-				556C481C12B987A3003F713E /* OID.as */,
-				556C481D12B987A3003F713E /* PEM.as */,
-				556C481E12B987A3003F713E /* PrintableString.as */,
-				556C481F12B987A3003F713E /* Sequence.as */,
-				556C482012B987A3003F713E /* Set.as */,
-				556C482112B987A3003F713E /* Type.as */,
-				556C482212B987A3003F713E /* UTCTime.as */,
-			);
-			path = der;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -700,25 +258,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5552925B12DF8170007B1977 /* rails.js in Resources */,
-				556CCC9212DE5DB1006DE45C /* rails3.js in Resources */,
 				556CCBC112DE1834006DE45C /* MainMenu.xib in Resources */,
-				5532182212CABE44008B962B /* log.html in Resources */,
-				5532182512CABE4C008B962B /* lumberjack.js in Resources */,
-				5532182612CABE4C008B962B /* rails2.js in Resources */,
-				556C482F12B987A3003F713E /* jquery.js in Resources */,
 				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
 				1DDD582C0DA1D0D100B32029 /* Log.xib in Resources */,
-				556C483012B987A3003F713E /* reset-min.css in Resources */,
-				556C483112B987A3003F713E /* splash.html in Resources */,
-				556C483212B987A3003F713E /* style.css in Resources */,
 				55321D0712D54C2B008B962B /* pinned.png in Resources */,
 				55321D1512D54E49008B962B /* unpinned.png in Resources */,
 				55321D2812D57FD6008B962B /* axe_icon.icns in Resources */,
-				55321D3A12D58BE8008B962B /* axe-splash-bg.png in Resources */,
 				55321D4212D5C070008B962B /* Preferences.xib in Resources */,
 				556CCBE612DE1C91006DE45C /* dsa_pub.pem in Resources */,
+				555294A812E60459007B1977 /* html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

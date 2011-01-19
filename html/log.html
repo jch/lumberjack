@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Lumberjack</title>
+  <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <script type="text/javascript" src="javascripts/jquery.js"></script>
+  <script type="text/javascript" src="javascripts/lumberjack.js"></script>
+  <script type="text/javascript" src="javascripts/plugins.js"></script>
+</head>
+<body>
+  <script type="text/javascript" charset="utf-8">
+    $(function() {
+      Lumberjack.setup({
+        prependTo: 'body'
+      });
+      Lumberjack.prependEntry();
+    })
+  </script>
+</body>
+</html>

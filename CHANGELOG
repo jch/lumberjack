@@ -1,5 +1,14 @@
 CHANGELOG
 
+2011/01/19
+
+ - http://selenium.googlecode.com/svn/trunk/docs/api/rb/Selenium/WebDriver/Find.html
+ - http://selenium.googlecode.com/svn/trunk/docs/api/rb/Selenium/WebDriver/Remote/Bridge.html
+
+2011/01/18
+
+ - http://twoguysarguing.wordpress.com/2010/11/02/make-javascript-tests-part-of-your-build-qunit-rhino/ - not worth it since I'm testing rendering and dom manipulations too
+
 2011/01/12
 
  - http://www.cocoabuilder.com/archive/cocoa/215461-opening-an-external-file-in-external-application.html

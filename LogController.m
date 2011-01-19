@@ -27,8 +27,9 @@
 
   NSURL *url = [[self document] fileURL];
 
-  NSString *splashPath = [[NSBundle mainBundle] pathForResource: @"splash" ofType: @"html"];
-  NSString *indexPath = [[NSBundle mainBundle] pathForResource: @"log" ofType: @"html"];
+  
+  NSString *splashPath = [[NSBundle mainBundle] pathForResource:@"splash" ofType:@"html" inDirectory:@"html"];
+  NSString *indexPath = [[NSBundle mainBundle] pathForResource: @"log" ofType: @"html" inDirectory:@"html"];
   NSString *filePath = (url ? indexPath : splashPath);
   NSURL *baseURL = [NSURL fileURLWithPath:[splashPath stringByDeletingLastPathComponent]];
 
@@ -100,7 +101,7 @@
   NSString *title = [NSString stringWithFormat:@"%@/%@",
                      [[self document] projectName],
                      [[[[self document] fileURL] pathComponents] lastObject]];
-  title = title ? title : @"Lumberjack";
+  title = [[self document] projectName] ? title : @"Lumberjack";
   return title;
 }
 

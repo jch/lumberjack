@@ -56,6 +56,11 @@
 {
   if (!self.file) { return; }
   NSLog(@"### startChecking");
+  // attempt to read 6k bytes, look for a start point. if none found, read another 6k bytes
+  // bufferList - NSArray of strings to notify, manage the ordering and notifying manually
+  
+  
+  
   [self checkFile]; // check once imediately
   self.timer = [NSTimer scheduledTimerWithTimeInterval:1.5
                                                 target:self
@@ -94,6 +99,9 @@
   // TODO: buffer partial lines
   NSArray *lines = [s componentsSeparatedByString:@"\n\n\n"];
   NSDictionary *retval = [NSDictionary dictionaryWithObjectsAndKeys:lines, @"lines", nil];
+  
+  // don't post notification until we find a start line...
+  // what if there is no start line? add a default rule to LJ.rules
 
   [[NSNotificationCenter defaultCenter] postNotificationName:kLinesAvailable object:self userInfo:retval];
   self.isChecking = NO;

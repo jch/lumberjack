@@ -10,4 +10,4 @@
 #define kLinesAvailable @"LinesAvailable"
 #define kTogglePin @"TogglePin"
 
-#define kBytesToRead 6000
+#define kBytesToRead 10000
