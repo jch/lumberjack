@@ -23,6 +23,7 @@
 		556CCC1912DE25B2006DE45C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556CCBAB12DE1617006DE45C /* Sparkle.framework */; };
 		558A9A7C12B2E4F200F2B380 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558A9A7B12B2E4F200F2B380 /* WebKit.framework */; };
 		558A9ABF12B2ED2800F2B380 /* LogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558A9ABE12B2ED2800F2B380 /* LogController.m */; };
+		55E7F223138C899A00252982 /* Chunkfive.otf in Resources */ = {isa = PBXBuildFile; fileRef = 55E7F222138C899A00252982 /* Chunkfive.otf */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC310486D014006FF6A4 /* Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* Log.m */; settings = {ATTRIBUTES = (); }; };
@@ -77,6 +78,7 @@
 		558A9ABD12B2ED2800F2B380 /* LogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogController.h; sourceTree = "<group>"; };
 		558A9ABE12B2ED2800F2B380 /* LogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogController.m; sourceTree = "<group>"; };
 		55E7F21B138C84C400252982 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		55E7F222138C899A00252982 /* Chunkfive.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Chunkfive.otf; path = html/Chunkfive.otf; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* lumberjack-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "lumberjack-Info.plist"; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* Lumberjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lumberjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 			children = (
 				55E7F21B138C84C400252982 /* README.md */,
 				5552948B12E60459007B1977 /* html */,
+				55E7F222138C899A00252982 /* Chunkfive.otf */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
@@ -269,6 +272,7 @@
 				55321D4212D5C070008B962B /* Preferences.xib in Resources */,
 				556CCBE612DE1C91006DE45C /* dsa_pub.pem in Resources */,
 				555294A812E60459007B1977 /* html in Resources */,
+				55E7F223138C899A00252982 /* Chunkfive.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
