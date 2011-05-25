@@ -60,7 +60,7 @@
 
 - (BOOL)isExpired
 {
-  NSDate *expiryDate = [NSDate dateWithNaturalLanguageString:@"2/6/2011"];
+  NSDate *expiryDate = [NSDate dateWithNaturalLanguageString:@"2/6/2111"];
   NSDate *now = [NSDate date];
   
   return [now compare:expiryDate] == NSOrderedDescending;
