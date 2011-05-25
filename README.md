@@ -11,3 +11,5 @@ The main log viewing window is a webkit view that uses the Javascript bridge to
 communicate with the Cocoa app. When a new log file is opened, a new Log document
 is created and watches for changes in the log file. Changes are pushed out and
 processed by Javascript to form log entries.
+
+<img src="http://cl.ly/3G201N223k29130r330Z" alt="main log window showing rails development log" />
